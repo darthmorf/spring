@@ -4,11 +4,14 @@ namespace Spring.UI.HUD
 {
     public class HUD : Component
 	{
-
+		// Config Properties
 		[Property, Category("Crosshair"), Title("Draw?")] 
 		bool mDrawCrosshair = true;
 		[Property, Category("Crosshair"), Title("Size")]
 		int mCrosshairSize = 4;
+
+
+		// Methods
 		protected override void OnUpdate()
 		{
 			if (Scene.Camera == null)
