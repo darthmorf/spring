@@ -1,5 +1,4 @@
-﻿using Sandbox;
-using Sandbox.Diagnostics;
+﻿using Sandbox.Diagnostics;
 using Spring.Debug;
 using Spring.Utils;
 
@@ -10,10 +9,18 @@ namespace Spring.Components
 		// Debug Properties
 		public static DebugProperty dGrabRaycast = new DebugProperty(Color.Red, true, 2.0f);
 		public static DebugProperty dGrabbable = new DebugProperty(Color.Green);
+		public static DebugProperty dGrabbed = new DebugProperty(Color.Cyan);
+		public static DebugProperty dGrabbedForce = new DebugProperty(Color.Cyan);
 
 		// Config Properties
 		[Property, Category("Grab"), Title("Range")]
-		private float mPickupRange = 100f;
+		private float mGrabRange = 100f;
+		[Property, Category("Grab"), Title("Force")]
+		private float mGrabForce = 100f;
+		[Property, Category("Grab"), Title("Min Force Distance")]
+		private float mMinForceDistance = 1f;
+		[Property, Category("Grab"), Title("Grabbed Angular Damping")]
+		private float mGrabbedAngularDamping = 20f;
 
 		// State
 		private enum State
@@ -22,10 +29,12 @@ namespace Spring.Components
 			Grabbing
 		}
 		private State mCurrentState;
-		private GameObject mGrabbedObject = null;
-		private GameObject mLookingAtObject = null;
 		private Vector3 mCachedEyePosition = Vector3.Zero;
 		private Rotation mCachedCameraRotation = Rotation.Identity;
+		private GameObject mGrabObject = null;
+		private Rigidbody mGrabRigidBody = null;
+		private float mGrabbedDistance = 0f;
+		private float mCachedAngularDamping = 0f;
 
 		// Cached Components
 		private PlayerController mPlayerController;
@@ -35,41 +44,73 @@ namespace Spring.Components
 		protected override void OnAwake()
 		{
 			mPlayerController = Components.GetInAncestorsOrSelf<PlayerController>();
+			Assert.NotNull(mPlayerController);
 		}
 
 		protected override void OnUpdate()
 		{
+			// It's important that we call drawing logic in OnUpdate rather than OnFixedUpdate otherwise we get flickering
 			if (mCurrentState == State.EmptyHanded)
 			{
 				if (CanGrab())
-					ShowGrabbable(mLookingAtObject); // It's important that we call this in OnUpdate rather than OnFixedUpdate otherwise we get flickering.
+					ShowGrabbable(mGrabObject, false);
+			}
+			else if (mCurrentState == State.Grabbing)
+			{
+				ShowGrabbable(mGrabObject, true);
 			}
 		}
 
 		protected override void OnFixedUpdate()
 		{
+			// If we're not currently grabbing anything, find something to grab
 			if (mCurrentState == State.EmptyHanded)
 			{
 				FindGrabbable();
 
-				if (WantsToGrab() && CanGrab())
-					Grab(mLookingAtObject);
+				// and grab it (if we want to)
+				if (WantsToGrabOrDrop() && CanGrab())
+					Grab(mGrabObject);
+			}
+			else if (mCurrentState == State.Grabbing)
+			{
+				// Otherwise if we want to drop it, drop it
+				if (WantsToGrabOrDrop())
+				{
+					Drop();
+					return;
+				}
+
+				// Else we need to update the position of the grabbed item
+				UpdateGrab(mGrabObject);
 			}
 		}
 
-		private bool WantsToGrab()
+		private void ShowGrabbable(GameObject pTarget, bool pGrabbed)
 		{
-			return Input.Down("grab"); // TODO - make a class to manage these strings much like TagDefs.
+			// TODO - non debug draw
+			SpringGizmo.DrawLineBBox(mGrabRigidBody.PhysicsBody.GetBounds(), pGrabbed ? dGrabbed : dGrabbable);
 		}
 
-		private bool CanGrab()
+		private void Grab(GameObject pTarget)
 		{
-			return mLookingAtObject != null;
+			Assert.NotNull(pTarget);
+
+			mGrabObject = pTarget;
+			mCurrentState = State.Grabbing;
+
+			// It's important we setup some angular damping or the picked up object will end up spinning around
+			mCachedAngularDamping = mGrabRigidBody.AngularDamping;
+			mGrabRigidBody.AngularDamping = mGrabbedAngularDamping;
+
+			Vector3 source = GetSourcePos();
+			mGrabbedDistance = source.Distance(mGrabObject.WorldPosition);
 		}
 
+		// Attempts to find an object with the Grabbable tag via raycast
 		private void FindGrabbable()
 		{
-			Vector3 source = mPlayerController.EyePosition;
+			Vector3 source = GetSourcePos();
 			Rotation cameraRotation = mPlayerController.EyeAngles.ToRotation();
 
 			// If the camera hasn't moved, don't bother raycasting again
@@ -79,7 +120,8 @@ namespace Spring.Components
 			mCachedEyePosition = source;
 			mCachedCameraRotation = cameraRotation;
 
-			Vector3 lookDirection = cameraRotation.Forward * mPickupRange;
+			// Calculate vector from camera to "look at point" for the raycast
+			Vector3 lookDirection = cameraRotation.Forward * mGrabRange;
 			Vector3 destination = source + lookDirection;
 			SceneTrace trace = Scene.Trace.Ray(source, destination);
 			trace = trace.WithTag(TagDefs.Tag.Grabbable.AsString());
@@ -87,32 +129,64 @@ namespace Spring.Components
 			SpringGizmo.DrawLine(source, destination, dGrabRaycast);
 			SceneTraceResult traceResult = trace.IgnoreStatic().Run();
 
+			// If we hit something, update object references
 			if (traceResult.Hit)
 			{
-				GameObject hitObject = traceResult.GameObject;
-				Assert.NotNull(hitObject);
+				mGrabObject = traceResult.GameObject;
+				Assert.NotNull(mGrabObject);
 
-				mLookingAtObject = hitObject;
-				return;
+				mGrabRigidBody = mGrabObject.GetComponent<Rigidbody>();
+				Assert.NotNull(mGrabRigidBody);
 			}
-
-			mLookingAtObject = null;
+			// Otherwise clear the references
+			else
+			{
+				mGrabObject = null;
+				mGrabRigidBody = null;
+			}
 		}
 
-		private void ShowGrabbable(GameObject rTarget)
+		private void UpdateGrab(GameObject pTarget)
 		{
-			Assert.NotNull(rTarget);
-			Rigidbody rigidbody = rTarget.GetComponent<Rigidbody>();
+			// Calculate vector from camera to desired object centre
+			Vector3 source = GetSourcePos();
+			Rotation cameraRotation = mPlayerController.EyeAngles.ToRotation();
+			Vector3 lookDirection = cameraRotation.Forward * mGrabbedDistance;
+			Vector3 destination = source + lookDirection;
 
-			SpringGizmo.DrawLineBBox(rigidbody.PhysicsBody.GetBounds(), dGrabbable);
+			// Calculate the vector from the current object's position to the desired position
+			Vector3 distance = destination - pTarget.WorldPosition;
+
+			SpringGizmo.DrawLine(pTarget.WorldPosition, destination, dGrabbedForce);
+
+			// If the distance between the object's location and the desired location is big enough, move it towards our desired location
+			if (distance.Length > mMinForceDistance)
+			{
+				mGrabRigidBody.Velocity = distance * mGrabForce;
+			}
 		}
 
-		private void Grab(GameObject rTarget)
+		private bool WantsToGrabOrDrop()
 		{
-			Assert.NotNull(rTarget);
-			Rigidbody rigidbody = rTarget.GetComponent<Rigidbody>();
+			return Input.Pressed("grab"); // TODO - make a class to manage these strings much like TagDefs.
+		}
 
-			// TODO ...
+		private bool CanGrab()
+		{
+			return mGrabObject != null;
+		}
+
+		private void Drop()
+		{
+			mGrabRigidBody.AngularDamping = mCachedAngularDamping;
+			mGrabRigidBody = null;
+			mGrabObject = null;
+			mCurrentState = State.EmptyHanded;
+		}
+
+		Vector3 GetSourcePos()
+		{
+			return mPlayerController.EyePosition;
 		}
 	}
 }

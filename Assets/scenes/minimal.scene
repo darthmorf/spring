@@ -27,6 +27,7 @@
         {
           "__type": "Spring.Debug.DebugSettingsEditor",
           "__guid": "2f524a63-2e07-4672-94ae-28c59f5f7368",
+          "mGrababbedForce": {},
           "mGrababbleObject": {},
           "mGrabRaycast": {},
           "OnComponentDestroy": null,
@@ -329,7 +330,10 @@
                 {
                   "__type": "Spring.Components.GrabController",
                   "__guid": "f0fa3afa-a639-4c74-9236-6f8c712213c5",
-                  "mPickupRange": 100,
+                  "mGrabbedAngularDamping": 20,
+                  "mGrabForce": 10,
+                  "mGrabRange": 100,
+                  "mMinForceDistance": 1,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -847,6 +851,19 @@
                   "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "Spring.Utils.TagApplier",
+                  "__guid": "1c575363-0267-426d-858e-ca3df9f88c6c",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "tags": [
+                    "Grabbable"
+                  ]
                 }
               ]
             },
@@ -1011,6 +1028,19 @@
                   "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "Spring.Utils.TagApplier",
+                  "__guid": "b85ccf22-362a-4ca5-baa8-c04434d24044",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "tags": [
+                    "Grabbable"
+                  ]
                 }
               ]
             },
@@ -1093,6 +1123,19 @@
                   "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "Spring.Utils.TagApplier",
+                  "__guid": "4c2b9ad7-1baf-42cb-a129-53dc567cb792",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "tags": [
+                    "Grabbable"
+                  ]
                 }
               ]
             },
@@ -1175,6 +1218,19 @@
                   "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "Spring.Utils.TagApplier",
+                  "__guid": "7fa1672e-3a1b-477a-9f23-a0fad3b1f91f",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "tags": [
+                    "Grabbable"
+                  ]
                 }
               ]
             },
@@ -1257,6 +1313,19 @@
                   "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "Spring.Utils.TagApplier",
+                  "__guid": "d1bc3694-398b-476b-a132-e3cefcb32b8b",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "tags": [
+                    "Grabbable"
+                  ]
                 }
               ]
             },
@@ -1339,6 +1408,19 @@
                   "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "Spring.Utils.TagApplier",
+                  "__guid": "164167aa-301d-4cc8-8da1-06f9e3ef4480",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "tags": [
+                    "Grabbable"
+                  ]
                 }
               ]
             },
@@ -1421,6 +1503,19 @@
                   "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "Spring.Utils.TagApplier",
+                  "__guid": "8e27a24a-228a-40cf-9981-abdf1180d6d8",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "tags": [
+                    "Grabbable"
+                  ]
                 }
               ]
             },
