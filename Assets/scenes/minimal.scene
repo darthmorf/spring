@@ -362,7 +362,7 @@
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
               "MaterialGroup": null,
-              "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+              "MaterialOverride": "materials/kenney-prototype/dark-01.vmat",
               "Model": "models/dev/plane_large.vmdl",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -377,7 +377,7 @@
                 "AfterUILayer": false
               },
               "RenderType": "On",
-              "Tint": "1000,1000,1000,1"
+              "Tint": "558.1396,558.1396,558.1396,1"
             },
             {
               "__type": "Sandbox.BoxCollider",
@@ -498,7 +498,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/blue-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -513,7 +513,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -593,7 +593,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/blue-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -608,7 +608,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -688,7 +688,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/blue-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -703,7 +703,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -783,7 +783,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/orange-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -798,7 +798,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -865,7 +865,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/orange-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -880,7 +880,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -947,7 +947,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/orange-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -962,7 +962,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -1029,7 +1029,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/orange-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -1044,7 +1044,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -1111,7 +1111,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/orange-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -1126,7 +1126,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -1193,7 +1193,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/orange-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -1208,7 +1208,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -1275,7 +1275,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/orange-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -1290,7 +1290,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -1357,7 +1357,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/orange-02.vmat",
                   "Model": "models/dev/box.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -1372,7 +1372,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.BoxCollider",
@@ -1438,7 +1438,7 @@
                   "BodyGroups": 18446744073709551615,
                   "CreateAttachments": false,
                   "MaterialGroup": null,
-                  "MaterialOverride": "materials/dev/simple/floor_simple_128.vmat",
+                  "MaterialOverride": "materials/kenney-prototype/light-08.vmat",
                   "Model": "models/dev/sphere.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -1453,7 +1453,7 @@
                     "AfterUILayer": false
                   },
                   "RenderType": "On",
-                  "Tint": "1,0.26667,0,1"
+                  "Tint": "1,1,1,1"
                 },
                 {
                   "__type": "Sandbox.Rigidbody",
