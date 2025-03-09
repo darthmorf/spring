@@ -16,19 +16,19 @@ namespace Spring.Debug
 
 	public struct DebugProperty
 	{
-		[Property, Title("Color")]
-		public Color mColour = Color.Red;
+		[Title("Colour")]
+		public Color mColour { get; set; } = Color.Red;
 
-		[Property, Title("Show?")]
-		public bool mShow = true;
+		[Title("Show?")]
+		public bool mShow { get; set; } = true;
 
-		[Property, Title("Line Thickness")]
-		public float mLineThickness = 1.0f;
+		[Title("Line Thickness")]
+		public float mLineThickness { get; set; } = 1.0f;
 
 		[JsonConstructor]
-		public DebugProperty(Color mColor, bool mShow = true, float mLineThickness = 1.0f)
+		public DebugProperty(Color mColour, bool mShow = true, float mLineThickness = 1.0f)
 		{
-			this.mColour = mColor;
+			this.mColour = mColour;
 			this.mShow = mShow;
 			this.mLineThickness = mLineThickness;
 		}
