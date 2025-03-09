@@ -51,7 +51,7 @@ namespace Spring.Components
 		protected override void OnUpdate()
 		{
 			// It's important that we call drawing logic in OnUpdate rather than OnFixedUpdate otherwise we get flickering
-			ShowGrabbable(mGrabObject);
+			ShowGrabbable();
 		}
 
 		protected override void OnFixedUpdate()
@@ -89,8 +89,11 @@ namespace Spring.Components
 			}
 		}
 
-		private void ShowGrabbable(GameObject pTarget)
+		private void ShowGrabbable()
 		{
+			if (mGrabRigidBody == null)
+				return;
+
 			// TODO - non debug draw
 			SpringGizmo.DrawLineBBox(mGrabRigidBody.PhysicsBody.GetBounds(), 
 				mCurrentState == State.EmptyHanded ? DebugSettings.GrabController_Grabbable : 
