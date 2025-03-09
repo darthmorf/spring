@@ -34,17 +34,17 @@
           },
           "mGrababbleObject": {
             "mColour": "0,0.6186,0.19589,1",
-            "mShow": true,
+            "mShow": false,
             "mLineThickness": 2
           },
           "mGrabbedObject": {
             "mColour": "0,0.61209,0.7814,1",
-            "mShow": true,
+            "mShow": false,
             "mLineThickness": 2
           },
           "mGrabbedRotateObject": {
             "mColour": "1,1,0,1",
-            "mShow": true,
+            "mShow": false,
             "mLineThickness": 1
           },
           "mGrabRaycast": {
@@ -833,7 +833,7 @@
                           "TargetColor": "0,1,0,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/4523da999bb64105.vtex"
                       },
                       "ColorTint": "255,255,255,255",
                       "NormalTexture": {
@@ -861,7 +861,7 @@
                           "TargetColor": "0,1,0,1",
                           "CacheToDisk": true
                         },
-                        "compiled": null
+                        "compiled": "textures/generated/imagefile/f8e8cf434e8fd95f.vtex"
                       },
                       "OnComponentDestroy": null,
                       "OnComponentDisabled": null,
@@ -1851,6 +1851,47 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null
+            }
+          ]
+        },
+        {
+          "__guid": "eb213f62-52b7-40c1-a95c-4c99260836fc",
+          "Flags": 0,
+          "Name": "Screen",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "af99cfe2-46d1-44ef-9524-edb9a811d065",
+              "AutoScreenScale": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 100
+            },
+            {
+              "__type": "Spring.UI.Screen.InputPrompt",
+              "__guid": "806976f4-b112-4f00-bc7c-2b5f771df8dd",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "4d5c0bf5-8745-4053-a167-f6391d44fc51",
+              "Flags": 0,
+              "Name": "Input Prompt",
+              "Enabled": true
             }
           ]
         }

@@ -1,7 +1,7 @@
 ﻿namespace Spring.Input
 {
 	// Make sure that the corresponding string is added to the input settings in Project > Settings > Input
-    public enum InputDefs
+    public enum InputDef
 	{
 		// Movement
 		Forward,

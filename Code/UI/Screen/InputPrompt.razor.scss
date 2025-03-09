@@ -1,0 +1,23 @@
+﻿InputPrompt {
+    .inputPromptContainer {
+        display: flex;
+        flex-direction: column-reverse;
+       
+        width: 100%;
+        height: 100%;
+    }
+
+    .InputPrompt {
+        margin: 5px;
+    }
+
+    .InputGlyph {
+        margin-right: 5px;
+    }
+
+    .InputPromptName {
+        font-size: 25px;
+        font-family: Poppins;
+        color: #fff;
+    }
+}

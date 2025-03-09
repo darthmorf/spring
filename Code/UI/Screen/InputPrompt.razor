@@ -1,0 +1,36 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Spring.UI.Screen
+
+<root>
+    <div class="InputPromptContainer">
+        @foreach (UIInputPrompt inputPrompt in UIController.mUIPromptController.mInputPrompts)
+        {
+            @if (inputPrompt.mVisible)
+            {
+                <div class="InputPrompt">
+                    <Image class="InputGlyph" Texture="@UIController.mUIPromptController.GetGlyph(inputPrompt.mInputDef)" />
+                    <div class="InputPromptName">@inputPrompt.mInputAction.Name</div>
+                </div>
+            }
+        }
+    </div>
+</root>
+
+@code
+{
+    protected override int BuildHash() => System.HashCode.Combine(UIController.mUIPromptController.GetHash());
+
+    protected override void OnStart()
+    {
+        UIController.mUIPromptController.Init();
+    }
+
+    protected override void OnUpdate()
+    {
+        
+    }
+
+    //<!---->
+}

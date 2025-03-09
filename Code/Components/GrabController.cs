@@ -3,6 +3,8 @@ using Spring.Input;
 using Spring.Debug;
 using Spring.Utils;
 using System;
+using Spring.UI.Screen;
+using Sandbox.VR;
 
 namespace Spring.Components
 {
@@ -93,6 +95,9 @@ namespace Spring.Components
 
 		private void ShowGrabbable()
 		{
+			UIController.mUIPromptController.SetPromptVisible(InputDef.grab, CanGrab());
+			UIController.mUIPromptController.SetPromptVisible(InputDef.resetGrabbedRotation, mCurrentState == State.Grabbing);
+
 			if (mGrabRigidBody == null)
 				return;
 
@@ -207,12 +212,12 @@ namespace Spring.Components
 
 		private bool WantsToGrabOrDrop()
 		{
-			return Sandbox.Input.Pressed(InputDefs.grab.ToString());
+			return Sandbox.Input.Pressed(InputDef.grab.ToString());
 		}
 
 		private bool WantsToRotateGrabbed()
 		{
-			return Sandbox.Input.Pressed(InputDefs.resetGrabbedRotation.ToString());
+			return Sandbox.Input.Pressed(InputDef.resetGrabbedRotation.ToString());
 		}
 
 		private bool CanGrab()

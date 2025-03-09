@@ -20,7 +20,7 @@ namespace Spring.UI.HUD
 			HudPainter hud = Scene.Camera.Hud;
 
 			if (mDrawCrosshair)
-				hud.DrawCircle( new Vector2( Screen.Width * 0.5f, Screen.Height * 0.5f ), mCrosshairSize, Color.White );
+				hud.DrawCircle(new Vector2(Sandbox.Screen.Width * 0.5f, Sandbox.Screen.Height * 0.5f), mCrosshairSize, Color.White);
 		}
     }
 }
