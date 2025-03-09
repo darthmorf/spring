@@ -42,6 +42,11 @@
             "mShow": true,
             "mLineThickness": 2
           },
+          "mGrabbedRotateObject": {
+            "mColour": "1,1,0,1",
+            "mShow": true,
+            "mLineThickness": 1
+          },
           "mGrabRaycast": {
             "mColour": "1,0,0,1",
             "mShow": false,
@@ -351,6 +356,8 @@
                   "mGrabForce": 10,
                   "mGrabRange": 100,
                   "mMinForceDistance": 1,
+                  "mMinResetRotation": 0.05,
+                  "mResetRotationSpeed": 0.1,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -603,7 +610,7 @@
               "__guid": "8977bb54-50e5-4470-8dba-8473f85ae96b",
               "Flags": 0,
               "Name": "Cube",
-              "Position": "76.90134,128.6213,38",
+              "Position": "76.90133,128.6213,48.04316",
               "Rotation": "0.00000001575584,0.00000000909664,-0.2117999,0.9773133",
               "Scale": "0.5,0.5,0.5",
               "Enabled": true,
@@ -690,6 +697,182 @@
                   "OnComponentUpdate": null,
                   "tags": [
                     "Grabbable"
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "39c04f95-8955-4f84-9e26-58300f4bd2c8",
+              "Flags": 0,
+              "Name": "Cube",
+              "Position": "76.90133,60.40556,12.5",
+              "Scale": "0.5,0.5,0.5",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5020bc93-e6e5-4c31-a5c0-f2796f505973",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/kenney-prototype/light-08.vmat",
+                  "Model": "models/dev/box.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "87a7567b-041a-46a1-8f70-45903c4911cb",
+                  "Center": "0,0,0",
+                  "Friction": null,
+                  "IsTrigger": false,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "50,50,50",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "Sandbox.Rigidbody",
+                  "__guid": "1cd06435-e0e6-42de-8ee5-26d8dae2ea86",
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {
+                    "X": false,
+                    "Y": false,
+                    "Z": false,
+                    "Pitch": false,
+                    "Yaw": false,
+                    "Roll": false
+                  },
+                  "MassCenterOverride": "0,0,0",
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OverrideMassCenter": false,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
+                },
+                {
+                  "__type": "Spring.Utils.TagApplier",
+                  "__guid": "1bdb6bad-cb94-4adc-9676-5f9ec5dfef22",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "tags": [
+                    "Grabbable"
+                  ]
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "a0c80091-8a61-44cd-84fd-fd2a4a684753",
+                  "Flags": 0,
+                  "Name": "Decal",
+                  "Position": "-25,0,-0.0000002667048",
+                  "Rotation": "0.08715574,0,0,0.9961947",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.Decal",
+                      "__guid": "164e2c9c-0647-4337-9df8-43f46dff5156",
+                      "__version": 1,
+                      "AttenuationAngle": 1,
+                      "ColorTexture": {
+                        "$compiler": "texture",
+                        "$source": "imagefile",
+                        "data": {
+                          "FilePath": "textures/misc/madmog.png",
+                          "MaxSize": 4096,
+                          "ConvertHeightToNormals": false,
+                          "NormalScale": 1,
+                          "Rotate": 0,
+                          "FlipVertical": false,
+                          "FlipHorizontal": false,
+                          "Padding": {
+                            "Size": "0,0",
+                            "EdgeSize": "0,0"
+                          },
+                          "Sharpen": 0,
+                          "Blur": 0,
+                          "Brightness": 1,
+                          "Contrast": 1.05,
+                          "Saturation": 0.38,
+                          "Hue": 0,
+                          "Colorize": false,
+                          "TargetColor": "0,1,0,1",
+                          "CacheToDisk": true
+                        },
+                        "compiled": null
+                      },
+                      "ColorTint": "255,255,255,255",
+                      "NormalTexture": {
+                        "$compiler": "texture",
+                        "$source": "imagefile",
+                        "data": {
+                          "FilePath": "textures/misc/madmog.png",
+                          "MaxSize": 4096,
+                          "ConvertHeightToNormals": true,
+                          "NormalScale": 1,
+                          "Rotate": 0,
+                          "FlipVertical": false,
+                          "FlipHorizontal": false,
+                          "Padding": {
+                            "Size": "0,0",
+                            "EdgeSize": "0,0"
+                          },
+                          "Sharpen": 0,
+                          "Blur": 0,
+                          "Brightness": 1,
+                          "Contrast": 1,
+                          "Saturation": 1,
+                          "Hue": 0,
+                          "Colorize": false,
+                          "TargetColor": "0,1,0,1",
+                          "CacheToDisk": true
+                        },
+                        "compiled": null
+                      },
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null,
+                      "RMOTexture": null,
+                      "Size": "32,32,32",
+                      "SortLayer": 0
+                    }
                   ]
                 }
               ]

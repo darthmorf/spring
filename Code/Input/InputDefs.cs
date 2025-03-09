@@ -19,6 +19,7 @@
 		reload,
 		use,
 		grab,
+		resetGrabbedRotation,
 
 		// Inventory
 		Slot1,

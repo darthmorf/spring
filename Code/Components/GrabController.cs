@@ -2,6 +2,7 @@
 using Sandbox.Input;
 using Spring.Debug;
 using Spring.Utils;
+using System;
 
 namespace Spring.Components
 {
@@ -16,12 +17,17 @@ namespace Spring.Components
 		private float mMinForceDistance = 1f;
 		[Property, Category("Grab"), Title("Grabbed Angular Damping")]
 		private float mGrabbedAngularDamping = 20f;
+		[Property, Category("Grab"), Title("Min Reset Rotation")]
+		private float mMinResetRotation = 0.05f;
+		[Property, Category("Grab"), Title("Reset Rotation Speed")]
+		private float mResetRotationSpeed = 0.1f;
 
 		// State
 		private enum State
 		{
 			EmptyHanded,
-			Grabbing
+			Grabbing,
+			GrabbedRotate
 		}
 		private State mCurrentState;
 		private Vector3 mCachedEyePosition = Vector3.Zero;
@@ -45,15 +51,7 @@ namespace Spring.Components
 		protected override void OnUpdate()
 		{
 			// It's important that we call drawing logic in OnUpdate rather than OnFixedUpdate otherwise we get flickering
-			if (mCurrentState == State.EmptyHanded)
-			{
-				if (CanGrab())
-					ShowGrabbable(mGrabObject, false);
-			}
-			else if (mCurrentState == State.Grabbing)
-			{
-				ShowGrabbable(mGrabObject, true);
-			}
+			ShowGrabbable(mGrabObject);
 		}
 
 		protected override void OnFixedUpdate()
@@ -67,24 +65,36 @@ namespace Spring.Components
 				if (WantsToGrabOrDrop() && CanGrab())
 					Grab(mGrabObject);
 			}
-			else if (mCurrentState == State.Grabbing)
+			else if (mCurrentState == State.Grabbing || mCurrentState == State.GrabbedRotate)
 			{
 				// Otherwise if we want to drop it, drop it
 				if (WantsToGrabOrDrop())
 				{
 					Drop();
-					return;
 				}
+				// If we need to rotate to "neutral" rotation, temporarily swap to that state
+				else if (WantsToRotateGrabbed())
+				{
+					mCurrentState = State.GrabbedRotate;
+				}
+				else
+				{
+					// Else we need to update the position of the grabbed item
+					UpdateGrab();
 
-				// Else we need to update the position of the grabbed item
-				UpdateGrab(mGrabObject);
+					// If we need to rotate, also rotate
+					if (mCurrentState == State.GrabbedRotate)
+						RotateGrabbedOject();
+				}
 			}
 		}
 
-		private void ShowGrabbable(GameObject pTarget, bool pGrabbed)
+		private void ShowGrabbable(GameObject pTarget)
 		{
 			// TODO - non debug draw
-			SpringGizmo.DrawLineBBox(mGrabRigidBody.PhysicsBody.GetBounds(), pGrabbed ? DebugSettings.GrabController_Grabbed : DebugSettings.GrabController_Grabbable);
+			SpringGizmo.DrawLineBBox(mGrabRigidBody.PhysicsBody.GetBounds(), 
+				mCurrentState == State.EmptyHanded ? DebugSettings.GrabController_Grabbable : 
+					(mCurrentState == State.Grabbing ? DebugSettings.GrabController_Grabbed : DebugSettings.GrabController_GrabbedRotate));
 		}
 
 		private void Grab(GameObject pTarget)
@@ -141,7 +151,7 @@ namespace Spring.Components
 			}
 		}
 
-		private void UpdateGrab(GameObject pTarget)
+		private void UpdateGrab()
 		{
 			// Calculate vector from camera to desired object centre
 			Vector3 source = GetSourcePos();
@@ -150,9 +160,9 @@ namespace Spring.Components
 			Vector3 destination = source + lookDirection;
 
 			// Calculate the vector from the current object's position to the desired position
-			Vector3 distance = destination - pTarget.WorldPosition;
+			Vector3 distance = destination - mGrabObject.WorldPosition;
 
-			SpringGizmo.DrawLine(pTarget.WorldPosition, destination, DebugSettings.GrabController_GrabbedForce);
+			SpringGizmo.DrawLine(mGrabObject.WorldPosition, destination, DebugSettings.GrabController_GrabbedForce);
 
 			// If the distance between the object's location and the desired location is big enough, move it towards our desired location
 			if (distance.Length > mMinForceDistance)
@@ -161,9 +171,26 @@ namespace Spring.Components
 			}
 		}
 
+		private void RotateGrabbedOject()
+		{
+			Rotation desiredRotation = mPlayerController.EyeAngles.ToRotation();
+			float delta = MathF.Abs(desiredRotation.Angle() - mGrabObject.WorldRotation.Angle());
+
+			// If we're rotated, do a tick of smooth rotate towards 0 rotation, otherwise go back to grabbed state
+			if (delta > mMinResetRotation)
+				mGrabRigidBody.SmoothRotate(desiredRotation, mResetRotationSpeed, Time.Delta);
+			else
+				mCurrentState = State.Grabbing;
+		}
+
 		private bool WantsToGrabOrDrop()
 		{
 			return Input.Pressed(InputDefs.grab.ToString());
+		}
+
+		private bool WantsToRotateGrabbed()
+		{
+			return Input.Pressed(InputDefs.resetGrabbedRotation.ToString());
 		}
 
 		private bool CanGrab()
