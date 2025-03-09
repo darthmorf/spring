@@ -26,9 +26,10 @@
         },
         {
           "__type": "Spring.Debug.DebugSettingsEditor",
-          "__guid": "2f524a63-2e07-4672-94ae-28c59f5f7368",
+          "__guid": "7ba980c8-c20d-40af-9628-00c168359a4d",
           "mGrababbedForce": {},
           "mGrababbleObject": {},
+          "mGrabbedObject": {},
           "mGrabRaycast": {},
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,

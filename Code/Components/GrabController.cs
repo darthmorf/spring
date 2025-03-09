@@ -6,12 +6,6 @@ namespace Spring.Components
 {
     class GrabController : Component
     {
-		// Debug Properties
-		public static DebugProperty dGrabRaycast = new DebugProperty(Color.Red, true, 2.0f);
-		public static DebugProperty dGrabbable = new DebugProperty(Color.Green);
-		public static DebugProperty dGrabbed = new DebugProperty(Color.Cyan);
-		public static DebugProperty dGrabbedForce = new DebugProperty(Color.Cyan);
-
 		// Config Properties
 		[Property, Category("Grab"), Title("Range")]
 		private float mGrabRange = 100f;
@@ -89,7 +83,7 @@ namespace Spring.Components
 		private void ShowGrabbable(GameObject pTarget, bool pGrabbed)
 		{
 			// TODO - non debug draw
-			SpringGizmo.DrawLineBBox(mGrabRigidBody.PhysicsBody.GetBounds(), pGrabbed ? dGrabbed : dGrabbable);
+			SpringGizmo.DrawLineBBox(mGrabRigidBody.PhysicsBody.GetBounds(), pGrabbed ? DebugSettings.GrabController_Grabbed : DebugSettings.GrabController_Grabbable);
 		}
 
 		private void Grab(GameObject pTarget)
@@ -126,7 +120,7 @@ namespace Spring.Components
 			SceneTrace trace = Scene.Trace.Ray(source, destination);
 			trace = trace.WithTag(TagDefs.Tag.Grabbable.AsString());
 
-			SpringGizmo.DrawLine(source, destination, dGrabRaycast);
+			SpringGizmo.DrawLine(source, destination, DebugSettings.GrabController_GrabRaycast);
 			SceneTraceResult traceResult = trace.IgnoreStatic().Run();
 
 			// If we hit something, update object references
@@ -157,7 +151,7 @@ namespace Spring.Components
 			// Calculate the vector from the current object's position to the desired position
 			Vector3 distance = destination - pTarget.WorldPosition;
 
-			SpringGizmo.DrawLine(pTarget.WorldPosition, destination, dGrabbedForce);
+			SpringGizmo.DrawLine(pTarget.WorldPosition, destination, DebugSettings.GrabController_GrabbedForce);
 
 			// If the distance between the object's location and the desired location is big enough, move it towards our desired location
 			if (distance.Length > mMinForceDistance)
