@@ -27,10 +27,26 @@
         {
           "__type": "Spring.Debug.DebugSettingsEditor",
           "__guid": "7ba980c8-c20d-40af-9628-00c168359a4d",
-          "mGrababbedForce": {},
-          "mGrababbleObject": {},
-          "mGrabbedObject": {},
-          "mGrabRaycast": {},
+          "mGrababbedForce": {
+            "mColour": "1,0,0.93333,1",
+            "mShow": false,
+            "mLineThickness": 1
+          },
+          "mGrababbleObject": {
+            "mColour": "0,0.6186,0.19589,1",
+            "mShow": true,
+            "mLineThickness": 2
+          },
+          "mGrabbedObject": {
+            "mColour": "0,0.61209,0.7814,1",
+            "mShow": true,
+            "mLineThickness": 2
+          },
+          "mGrabRaycast": {
+            "mColour": "1,0,0,1",
+            "mShow": false,
+            "mLineThickness": 1
+          },
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -1134,9 +1150,7 @@
                   "OnComponentFixedUpdate": null,
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
-                  "tags": [
-                    "Grabbable"
-                  ]
+                  "tags": []
                 }
               ]
             },
@@ -1324,9 +1338,7 @@
                   "OnComponentFixedUpdate": null,
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
-                  "tags": [
-                    "Grabbable"
-                  ]
+                  "tags": []
                 }
               ]
             },

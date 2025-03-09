@@ -1,4 +1,5 @@
 ﻿using Sandbox.Diagnostics;
+using Sandbox.Input;
 using Spring.Debug;
 using Spring.Utils;
 
@@ -118,7 +119,7 @@ namespace Spring.Components
 			Vector3 lookDirection = cameraRotation.Forward * mGrabRange;
 			Vector3 destination = source + lookDirection;
 			SceneTrace trace = Scene.Trace.Ray(source, destination);
-			trace = trace.WithTag(TagDefs.Tag.Grabbable.AsString());
+			trace = trace.WithTag(Tag.Grabbable.ToString());
 
 			SpringGizmo.DrawLine(source, destination, DebugSettings.GrabController_GrabRaycast);
 			SceneTraceResult traceResult = trace.IgnoreStatic().Run();
@@ -162,7 +163,7 @@ namespace Spring.Components
 
 		private bool WantsToGrabOrDrop()
 		{
-			return Input.Pressed("grab"); // TODO - make a class to manage these strings much like TagDefs.
+			return Input.Pressed(InputDefs.grab.ToString());
 		}
 
 		private bool CanGrab()
