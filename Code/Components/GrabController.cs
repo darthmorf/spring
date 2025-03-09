@@ -30,8 +30,10 @@ namespace Spring.Components
 			GrabbedRotate
 		}
 		private State mCurrentState;
-		private Vector3 mCachedEyePosition = Vector3.Zero;
-		private Rotation mCachedCameraRotation = Rotation.Identity;
+		private Vector3 mLastCameraPosition = Vector3.Zero;
+		private Rotation mLastCameraRotation = Rotation.Identity;
+		private Rotation mGrabStartObjectRotation = Rotation.Identity;
+		private Rotation mGrabStartCameraRotation = Rotation.Identity;
 		private GameObject mGrabObject = null;
 		private Rigidbody mGrabRigidBody = null;
 		private float mGrabbedDistance = 0f;
@@ -111,6 +113,10 @@ namespace Spring.Components
 			mCachedAngularDamping = mGrabRigidBody.AngularDamping;
 			mGrabRigidBody.AngularDamping = mGrabbedAngularDamping;
 
+			// Cache off the object's start rotation so that we can rotate it properly as the camera rotates
+			mGrabStartObjectRotation = mGrabRigidBody.WorldRotation;
+			mGrabStartCameraRotation = mPlayerController.EyeAngles.ToRotation();
+
 			Vector3 source = GetSourcePos();
 			mGrabbedDistance = source.Distance(mGrabObject.WorldPosition);
 		}
@@ -122,11 +128,11 @@ namespace Spring.Components
 			Rotation cameraRotation = mPlayerController.EyeAngles.ToRotation();
 
 			// If the camera hasn't moved, don't bother raycasting again
-			if (mCachedEyePosition == source && mCachedCameraRotation == cameraRotation)
+			if (mLastCameraPosition == source && mLastCameraRotation == cameraRotation)
 				return;
 
-			mCachedEyePosition = source;
-			mCachedCameraRotation = cameraRotation;
+			mLastCameraPosition = source;
+			mLastCameraRotation = cameraRotation;
 
 			// Calculate vector from camera to "look at point" for the raycast
 			Vector3 lookDirection = cameraRotation.Forward * mGrabRange;
@@ -171,7 +177,15 @@ namespace Spring.Components
 			if (distance.Length > mMinForceDistance)
 			{
 				mGrabRigidBody.Velocity = distance * mGrabForce;
+
+				// Apply relative rotation
+				Rotation cameraRotationDelta = Rotation.Difference(cameraRotation, mGrabStartCameraRotation);
+				Rotation desiredRotation = cameraRotationDelta.Inverse * mGrabStartObjectRotation;
+				mGrabRigidBody.SmoothRotate(desiredRotation, mResetRotationSpeed, Time.Delta);
 			}
+
+			mLastCameraPosition = source;
+			mLastCameraRotation = cameraRotation;
 		}
 
 		private void RotateGrabbedOject()
@@ -179,11 +193,16 @@ namespace Spring.Components
 			Rotation desiredRotation = mPlayerController.EyeAngles.ToRotation();
 			float delta = MathF.Abs(desiredRotation.Angle() - mGrabObject.WorldRotation.Angle());
 
-			// If we're rotated, do a tick of smooth rotate towards 0 rotation, otherwise go back to grabbed state
+			// If we can reset, then update the cached positions to reflect the desired rotation
 			if (delta > mMinResetRotation)
-				mGrabRigidBody.SmoothRotate(desiredRotation, mResetRotationSpeed, Time.Delta);
+			{
+				mGrabStartObjectRotation = desiredRotation;
+				mGrabStartCameraRotation = mPlayerController.EyeAngles.ToRotation();
+			}
 			else
+			{
 				mCurrentState = State.Grabbing;
+			}
 		}
 
 		private bool WantsToGrabOrDrop()
@@ -206,6 +225,8 @@ namespace Spring.Components
 			mGrabRigidBody.AngularDamping = mCachedAngularDamping;
 			mGrabRigidBody = null;
 			mGrabObject = null;
+			mGrabStartObjectRotation = Rotation.Identity;
+			mGrabStartCameraRotation = Rotation.Identity;
 			mCurrentState = State.EmptyHanded;
 		}
 
