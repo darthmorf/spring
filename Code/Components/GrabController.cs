@@ -1,5 +1,5 @@
 ﻿using Sandbox.Diagnostics;
-using Sandbox.Input;
+using Spring.Input;
 using Spring.Debug;
 using Spring.Utils;
 using System;
@@ -188,12 +188,12 @@ namespace Spring.Components
 
 		private bool WantsToGrabOrDrop()
 		{
-			return Input.Pressed(InputDefs.grab.ToString());
+			return Sandbox.Input.Pressed(InputDefs.grab.ToString());
 		}
 
 		private bool WantsToRotateGrabbed()
 		{
-			return Input.Pressed(InputDefs.resetGrabbedRotation.ToString());
+			return Sandbox.Input.Pressed(InputDefs.resetGrabbedRotation.ToString());
 		}
 
 		private bool CanGrab()
