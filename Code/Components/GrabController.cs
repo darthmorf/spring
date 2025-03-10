@@ -4,7 +4,7 @@ using Spring.Debug;
 using Spring.Utils;
 using System;
 using Spring.UI.Screen;
-using Sandbox.VR;
+using Sandbox.Utils;
 
 namespace Spring.Components
 {
@@ -182,6 +182,9 @@ namespace Spring.Components
 			if (distance.Length > mMinForceDistance)
 			{
 				mGrabRigidBody.Velocity = distance * mGrabForce;
+
+				// We don't want to apply the camera's pitch to the object
+				cameraRotation.SetPitch(0f);
 
 				// Apply relative rotation
 				Rotation cameraRotationDelta = Rotation.Difference(cameraRotation, mGrabStartCameraRotation);
