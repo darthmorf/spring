@@ -2,12 +2,17 @@
     .inputPromptContainer {
         display: flex;
         flex-direction: column-reverse;
-        width: 100%;
+        align-items: flex-start;
         height: 100%;
     }
 
     .InputPrompt {
-        margin: 5px;
+        margin: 2.5px;
+        padding: 5px;
+        padding-right: 10px;
+        background-color: #0000007c;
+        border-radius: 10px;
+        width: fit-content;
     }
 
     .InputGlyph {
