@@ -356,7 +356,7 @@
                   "mGrabForce": 10,
                   "mGrabRange": 100,
                   "mMinForceDistance": 1,
-                  "mMinResetRotation": 0.05,
+                  "mMinResetRotation": 1,
                   "mResetRotationSpeed": 0.1,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
