@@ -5,6 +5,7 @@ using Spring.Utils;
 using System;
 using Spring.UI.Screen;
 using Sandbox.Utils;
+using Sandbox;
 
 namespace Spring.Components
 {
@@ -66,13 +67,13 @@ namespace Spring.Components
 				FindGrabbable();
 
 				// and grab it (if we want to)
-				if (WantsToGrabOrDrop() && CanGrab())
+				if (WantsToGrabOrDrop() && CanGrab() && !StandingOnGrababble())
 					Grab(mGrabObject);
 			}
 			else if (mCurrentState == State.Grabbing || mCurrentState == State.GrabbedRotate)
 			{
-				// Otherwise if we want to drop it, drop it
-				if (WantsToGrabOrDrop())
+				// If we want to drop it, or we're now standing on the object, drop it
+				if (WantsToGrabOrDrop() || StandingOnGrababble())
 				{
 					Drop();
 				}
@@ -95,6 +96,7 @@ namespace Spring.Components
 
 		private void ShowGrabbable()
 		{
+			UIController.mUIPromptController.SetPromptEnabled(InputDef.grab, !StandingOnGrababble());
 			UIController.mUIPromptController.SetPromptVisible(InputDef.grab, CanGrab());
 			UIController.mUIPromptController.SetPromptVisible(InputDef.resetGrabbedRotation, mCurrentState == State.Grabbing);
 
@@ -229,6 +231,11 @@ namespace Spring.Components
 		private bool CanGrab()
 		{
 			return mGrabObject != null;
+		}
+
+		private bool StandingOnGrababble()
+		{
+			return CanGrab() && mPlayerController.GroundObject == mGrabObject;	
 		}
 
 		private void Drop()

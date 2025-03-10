@@ -10,8 +10,8 @@
             @if (inputPrompt.mVisible)
             {
                 <div class="InputPrompt">
-                    <Image class="InputGlyph" Texture="@UIController.mUIPromptController.GetGlyph(inputPrompt.mInputDef)" />
-                    <div class="InputPromptName">@inputPrompt.mInputAction.Name</div>
+                    <Image class="InputGlyph @(inputPrompt.mEnabled ? "" : "Disabled")" Texture="@UIController.mUIPromptController.GetGlyph(inputPrompt.mInputDef)"/>
+                    <div class="InputPromptName @(inputPrompt.mEnabled ? "" : "Disabled")">@inputPrompt.mInputAction.Name</div>
                 </div>
             }
         }
@@ -27,8 +27,5 @@
         UIController.mUIPromptController.Init();
     }
 
-    protected override void OnUpdate()
-    {
-        
-    }
+    protected override void OnUpdate() { }
 }
