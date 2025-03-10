@@ -185,6 +185,7 @@ namespace Spring.Components
 
 				// We don't want to apply the camera's pitch to the object
 				cameraRotation.SetPitch(0f);
+				mGrabStartCameraRotation.SetPitch(0f);
 
 				// Apply relative rotation
 				Rotation cameraRotationDelta = Rotation.Difference(cameraRotation, mGrabStartCameraRotation);
@@ -204,6 +205,8 @@ namespace Spring.Components
 			// If we can reset, then update the cached positions to reflect the desired rotation
 			if (delta > mMinResetRotation)
 			{
+				// We always want the pitch to be relative to 0, not the camera
+				desiredRotation.SetPitch(0);
 				mGrabStartObjectRotation = desiredRotation;
 				mGrabStartCameraRotation = mPlayerController.EyeAngles.ToRotation();
 			}
