@@ -147,8 +147,8 @@
               "__type": "Sandbox.Rigidbody",
               "__guid": "93f9d858-2d38-4bfd-ac9e-b61bb80e816c",
               "AngularDamping": 1,
-              "Gravity": false,
-              "LinearDamping": 10,
+              "Gravity": true,
+              "LinearDamping": 0.1,
               "Locking": {
                 "X": false,
                 "Y": false,
@@ -157,7 +157,7 @@
                 "Yaw": true,
                 "Roll": true
               },
-              "MassCenterOverride": "0,0,0",
+              "MassCenterOverride": "0,0,36",
               "MassOverride": 500,
               "MotionEnabled": true,
               "OnComponentDestroy": null,
@@ -290,7 +290,7 @@
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "0723c970-3d45-422d-b956-0960c0d0d910",
                   "Center": "0,0,18",
-                  "Friction": 81,
+                  "Friction": 0,
                   "IsTrigger": false,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -340,6 +340,83 @@
                   "Viewport": "0,0,1,1",
                   "ZFar": 10000,
                   "ZNear": 10
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "bb331575-46c1-45f6-8c14-4017577cdd8c",
+                  "Flags": 0,
+                  "Name": "Spot Light",
+                  "Tags": "light_spot,light",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.SpotLight",
+                      "__guid": "2a99559c-c191-4cb8-80da-312adf8a7f02",
+                      "Attenuation": 0.38,
+                      "ConeInner": 19.59,
+                      "ConeOuter": 16.98,
+                      "Cookie": {
+                        "$compiler": "texture",
+                        "$source": "imagefile",
+                        "data": {
+                          "FilePath": "textures/misc/flashlight-pattern/flashlightpattern.png",
+                          "MaxSize": 4096,
+                          "ConvertHeightToNormals": false,
+                          "NormalScale": 1,
+                          "Rotate": 0,
+                          "FlipVertical": false,
+                          "FlipHorizontal": false,
+                          "Padding": {
+                            "Size": "0,0",
+                            "EdgeSize": "0,0"
+                          },
+                          "Sharpen": 0,
+                          "InvertColor": false,
+                          "Blur": 0,
+                          "Brightness": 1,
+                          "Contrast": 1,
+                          "Saturation": 1,
+                          "Hue": 0,
+                          "Colorize": false,
+                          "TargetColor": "0,1,0,1",
+                          "CacheToDisk": true
+                        },
+                        "compiled": "textures/generated/imagefile/32ee91a69902ecee.vtex"
+                      },
+                      "FogMode": "Enabled",
+                      "FogStrength": 1,
+                      "LightColor": "1,0.97699,0.91373,1",
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null,
+                      "Radius": 500,
+                      "Shadows": true
+                    },
+                    {
+                      "__type": "Spring.Utils.HotkeyToggler",
+                      "__guid": "77d934c8-8b84-4c79-afb4-c2efb27ac81a",
+                      "mComponents": [
+                        {
+                          "_type": "component",
+                          "component_id": "2a99559c-c191-4cb8-80da-312adf8a7f02",
+                          "go": "bb331575-46c1-45f6-8c14-4017577cdd8c",
+                          "component_type": "SpotLight"
+                        }
+                      ],
+                      "mEnabled": false,
+                      "mHotkey": "Flashlight",
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null
+                    }
+                  ]
                 }
               ]
             },
@@ -11788,6 +11865,7 @@
               "Opacity": 1,
               "Scale": 1,
               "ScaleStrategy": "ConsistentHeight",
+              "TargetCamera": null,
               "ZIndex": 100
             },
             {
@@ -11823,6 +11901,7 @@
               "Opacity": 1,
               "Scale": 1,
               "ScaleStrategy": "ConsistentHeight",
+              "TargetCamera": null,
               "ZIndex": 100
             },
             {

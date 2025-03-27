@@ -20,6 +20,7 @@
 		use,
 		grab,
 		resetGrabbedRotation,
+		flashlight,
 
 		// Inventory
 		Slot1,
