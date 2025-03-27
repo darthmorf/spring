@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sandbox.Utils
+namespace Spring.Utils
 {
     public static class MathsExtensions
     {
