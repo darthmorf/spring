@@ -155,8 +155,7 @@ namespace Spring.Components
 				mGrabObject = traceResult.GameObject;
 				Assert.NotNull(mGrabObject);
 
-				mGrabRigidBody = mGrabObject.GetComponent<Rigidbody>();
-				Assert.NotNull(mGrabRigidBody);
+				mGrabRigidBody = mGrabObject.MustGetComponent<Rigidbody>();
 			}
 			// Otherwise clear the references
 			else

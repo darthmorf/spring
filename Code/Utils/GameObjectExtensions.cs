@@ -25,5 +25,12 @@ namespace Spring.Utils
             Assert.NotNull(component, $"Cannot get component '{typeof(T).Name}' of '{pComponent.GameObject.Name}' parent");
             return component;
         }
+
+        public static T MustGetComponent<T>(this GameObject pGameObject) where T : Component
+        {
+            T component = pGameObject.GetComponent<T>();
+            Assert.NotNull(component, $"Cannot get component '{typeof(T).Name}' of '{pGameObject.Name}'");
+            return component;
+        }
     }
 }
