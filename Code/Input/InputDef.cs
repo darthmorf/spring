@@ -21,6 +21,7 @@
 		grab,
 		resetGrabbedRotation,
 		flashlight,
+		openDoor,
 
 		// Inventory
 		Slot1,
