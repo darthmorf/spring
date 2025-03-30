@@ -86,7 +86,7 @@ namespace Spring.Components
 			}
 		}
 
-		public void OnLookStart(GameObject pLookingAtObject)
+		public void OnLookUpdate(GameObject pLookingAtObject)
 		{
 			if (mCurrentState == State.EmptyHanded) // If we're already grabbing an object, we don't want something else stealing the grab
 			{ 
@@ -259,7 +259,11 @@ namespace Spring.Components
 		void IInteractable.OnLookStart(ref InteractEvent pEvent) 
 		{
 			mCurrentGrabController = pEvent.mIteractor.MustGetComponent<GrabController>();
-			mCurrentGrabController.OnLookStart(pEvent.mIteractee);
+		}
+
+		void IInteractable.OnLookFixedUpdate(ref InteractEvent pEvent)
+		{
+			mCurrentGrabController.OnLookUpdate(pEvent.mIteractee);
 		}
 
 		void IInteractable.OnLookEnd(ref InteractEvent pEvent)
