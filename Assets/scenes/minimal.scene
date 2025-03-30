@@ -10918,6 +10918,81 @@
                               "Surface": null,
                               "SurfaceVelocity": "0,0,0"
                             }
+                          ],
+                          "Children": [
+                            {
+                              "__guid": "d14960bc-623e-4361-ab5d-f6f02f9390e0",
+                              "Flags": 0,
+                              "Name": "Description",
+                              "Position": "-0.002789497,-12.25687,2.087811",
+                              "Scale": "2.5,1.4,0.336",
+                              "Enabled": true,
+                              "Components": [
+                                {
+                                  "__type": "Sandbox.Decal",
+                                  "__guid": "1a7a1975-a22a-4784-92d4-56f4cab44c6c",
+                                  "__version": 1,
+                                  "AttenuationAngle": 1,
+                                  "ColorTexture": {
+                                    "$compiler": "texture",
+                                    "$source": "text",
+                                    "data": {
+                                      "Size": "1280,720",
+                                      "Margin": {
+                                        "Size": "0,0",
+                                        "EdgeSize": "0,0"
+                                      },
+                                      "TextFlags": "Left, CenterHorizontally, CenterVertically, DontClip",
+                                      "TextScope": {
+                                        "Text": "Sticky:\t\t\t false\nMonodirectional: false\nInteractable:\t false",
+                                        "TextColor": "1,1,1,1",
+                                        "FontName": "Roboto Mono",
+                                        "FontSize": 45,
+                                        "FontWeight": 600,
+                                        "FontItalic": false,
+                                        "LineHeight": 1,
+                                        "LetterSpacing": 0,
+                                        "WordSpacing": 0,
+                                        "Outline": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,0,1,1"
+                                        },
+                                        "Shadow": {
+                                          "Enabled": false,
+                                          "Size": 8,
+                                          "Color": "0,0,0,1",
+                                          "Offset": "4,4"
+                                        },
+                                        "OutlineUnder": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,1,0,1"
+                                        },
+                                        "ShadowUnder": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,0,0,1",
+                                          "Offset": "4,4"
+                                        }
+                                      }
+                                    },
+                                    "compiled": null
+                                  },
+                                  "ColorTint": "255,255,255,255",
+                                  "NormalTexture": null,
+                                  "OnComponentDestroy": null,
+                                  "OnComponentDisabled": null,
+                                  "OnComponentEnabled": null,
+                                  "OnComponentFixedUpdate": null,
+                                  "OnComponentStart": null,
+                                  "OnComponentUpdate": null,
+                                  "RMOTexture": null,
+                                  "Size": "400,32,32",
+                                  "SortLayer": 1
+                                }
+                              ]
+                            }
                           ]
                         },
                         {
@@ -11255,6 +11330,82 @@
                               "Surface": null,
                               "SurfaceVelocity": "0,0,0"
                             }
+                          ],
+                          "Children": [
+                            {
+                              "__guid": "df102303-a595-487f-99e9-0b756509788b",
+                              "Flags": 0,
+                              "Name": "Description",
+                              "Position": "0,13.27545,2.614377",
+                              "Rotation": "-0.000000000000002256344,0.00000005161914,1,-0.00000004371139",
+                              "Scale": "2.5,1.4,0.336",
+                              "Enabled": true,
+                              "Components": [
+                                {
+                                  "__type": "Sandbox.Decal",
+                                  "__guid": "ca61150d-0d66-4cd1-a716-a78e1cac28be",
+                                  "__version": 1,
+                                  "AttenuationAngle": 1,
+                                  "ColorTexture": {
+                                    "$compiler": "texture",
+                                    "$source": "text",
+                                    "data": {
+                                      "Size": "1280,720",
+                                      "Margin": {
+                                        "Size": "0,0",
+                                        "EdgeSize": "0,0"
+                                      },
+                                      "TextFlags": "Left, CenterHorizontally, CenterVertically, DontClip",
+                                      "TextScope": {
+                                        "Text": "Sticky:\t\t\t true\nMonodirectional: false\nInteractable:\t false",
+                                        "TextColor": "1,1,1,1",
+                                        "FontName": "Roboto Mono",
+                                        "FontSize": 45,
+                                        "FontWeight": 600,
+                                        "FontItalic": false,
+                                        "LineHeight": 1,
+                                        "LetterSpacing": 0,
+                                        "WordSpacing": 0,
+                                        "Outline": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,0,1,1"
+                                        },
+                                        "Shadow": {
+                                          "Enabled": false,
+                                          "Size": 8,
+                                          "Color": "0,0,0,1",
+                                          "Offset": "4,4"
+                                        },
+                                        "OutlineUnder": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,1,0,1"
+                                        },
+                                        "ShadowUnder": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,0,0,1",
+                                          "Offset": "4,4"
+                                        }
+                                      }
+                                    },
+                                    "compiled": null
+                                  },
+                                  "ColorTint": "255,255,255,255",
+                                  "NormalTexture": null,
+                                  "OnComponentDestroy": null,
+                                  "OnComponentDisabled": null,
+                                  "OnComponentEnabled": null,
+                                  "OnComponentFixedUpdate": null,
+                                  "OnComponentStart": null,
+                                  "OnComponentUpdate": null,
+                                  "RMOTexture": null,
+                                  "Size": "400,32,32",
+                                  "SortLayer": 1
+                                }
+                              ]
+                            }
                           ]
                         },
                         {
@@ -11537,6 +11688,82 @@
                               "Static": false,
                               "Surface": null,
                               "SurfaceVelocity": "0,0,0"
+                            }
+                          ],
+                          "Children": [
+                            {
+                              "__guid": "fc7f33dc-2a41-4e9a-ab61-72b8d968020d",
+                              "Flags": 0,
+                              "Name": "Description",
+                              "Position": "-0.00001907349,12.2092,1.707047",
+                              "Rotation": "-0,0,1,-0.00000004371139",
+                              "Scale": "2.5,1.4,0.336",
+                              "Enabled": true,
+                              "Components": [
+                                {
+                                  "__type": "Sandbox.Decal",
+                                  "__guid": "ad596f59-61d5-4b7c-9e59-f8e1a9e77c14",
+                                  "__version": 1,
+                                  "AttenuationAngle": 1,
+                                  "ColorTexture": {
+                                    "$compiler": "texture",
+                                    "$source": "text",
+                                    "data": {
+                                      "Size": "1280,720",
+                                      "Margin": {
+                                        "Size": "0,0",
+                                        "EdgeSize": "0,0"
+                                      },
+                                      "TextFlags": "Left, CenterHorizontally, CenterVertically, DontClip",
+                                      "TextScope": {
+                                        "Text": "Sticky:\t\t\t false\nMonodirectional: true\nInteractable:\t true",
+                                        "TextColor": "1,1,1,1",
+                                        "FontName": "Roboto Mono",
+                                        "FontSize": 45,
+                                        "FontWeight": 600,
+                                        "FontItalic": false,
+                                        "LineHeight": 1,
+                                        "LetterSpacing": 0,
+                                        "WordSpacing": 0,
+                                        "Outline": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,0,1,1"
+                                        },
+                                        "Shadow": {
+                                          "Enabled": false,
+                                          "Size": 8,
+                                          "Color": "0,0,0,1",
+                                          "Offset": "4,4"
+                                        },
+                                        "OutlineUnder": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,1,0,1"
+                                        },
+                                        "ShadowUnder": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,0,0,1",
+                                          "Offset": "4,4"
+                                        }
+                                      }
+                                    },
+                                    "compiled": null
+                                  },
+                                  "ColorTint": "255,255,255,255",
+                                  "NormalTexture": null,
+                                  "OnComponentDestroy": null,
+                                  "OnComponentDisabled": null,
+                                  "OnComponentEnabled": null,
+                                  "OnComponentFixedUpdate": null,
+                                  "OnComponentStart": null,
+                                  "OnComponentUpdate": null,
+                                  "RMOTexture": null,
+                                  "Size": "400,32,32",
+                                  "SortLayer": 1
+                                }
+                              ]
                             }
                           ]
                         },
@@ -11830,6 +12057,82 @@
                               "Static": false,
                               "Surface": null,
                               "SurfaceVelocity": "0,0,0"
+                            }
+                          ],
+                          "Children": [
+                            {
+                              "__guid": "ecd4ee3a-8107-4205-b348-b996c31f5dea",
+                              "Flags": 0,
+                              "Name": "Description",
+                              "Position": "0,11.58762,1.710971",
+                              "Rotation": "0,0,1,-0.00000004371139",
+                              "Scale": "2.5,1.4,0.336",
+                              "Enabled": true,
+                              "Components": [
+                                {
+                                  "__type": "Sandbox.Decal",
+                                  "__guid": "3e1a3556-957e-4faa-84ea-68ab2166bd2b",
+                                  "__version": 1,
+                                  "AttenuationAngle": 1,
+                                  "ColorTexture": {
+                                    "$compiler": "texture",
+                                    "$source": "text",
+                                    "data": {
+                                      "Size": "1280,720",
+                                      "Margin": {
+                                        "Size": "0,0",
+                                        "EdgeSize": "0,0"
+                                      },
+                                      "TextFlags": "Left, CenterHorizontally, CenterVertically, DontClip",
+                                      "TextScope": {
+                                        "Text": "Sticky:\t\t\t false\nMonodirectional: false\nInteractable:\t true",
+                                        "TextColor": "1,1,1,1",
+                                        "FontName": "Roboto Mono",
+                                        "FontSize": 45,
+                                        "FontWeight": 600,
+                                        "FontItalic": false,
+                                        "LineHeight": 1,
+                                        "LetterSpacing": 0,
+                                        "WordSpacing": 0,
+                                        "Outline": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,0,1,1"
+                                        },
+                                        "Shadow": {
+                                          "Enabled": false,
+                                          "Size": 8,
+                                          "Color": "0,0,0,1",
+                                          "Offset": "4,4"
+                                        },
+                                        "OutlineUnder": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,1,0,1"
+                                        },
+                                        "ShadowUnder": {
+                                          "Enabled": false,
+                                          "Size": 4,
+                                          "Color": "0,0,0,1",
+                                          "Offset": "4,4"
+                                        }
+                                      }
+                                    },
+                                    "compiled": null
+                                  },
+                                  "ColorTint": "255,255,255,255",
+                                  "NormalTexture": null,
+                                  "OnComponentDestroy": null,
+                                  "OnComponentDisabled": null,
+                                  "OnComponentEnabled": null,
+                                  "OnComponentFixedUpdate": null,
+                                  "OnComponentStart": null,
+                                  "OnComponentUpdate": null,
+                                  "RMOTexture": null,
+                                  "Size": "400,32,32",
+                                  "SortLayer": 1
+                                }
+                              ]
                             }
                           ]
                         },
@@ -12544,7 +12847,7 @@
                                         }
                                       }
                                     },
-                                    "compiled": null
+                                    "compiled": "textures/generated/text/8ed06bf7cc891aac.vtex"
                                   },
                                   "ColorTint": "255,255,255,255",
                                   "NormalTexture": null,
@@ -12618,7 +12921,7 @@
                                         }
                                       }
                                     },
-                                    "compiled": null
+                                    "compiled": "textures/generated/text/8ed06bf7cc891aac.vtex"
                                   },
                                   "ColorTint": "255,255,255,255",
                                   "NormalTexture": null,
