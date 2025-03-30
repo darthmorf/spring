@@ -138,7 +138,7 @@
               "UseAnimatorControls": true,
               "UseButton": "use",
               "UseCameraControls": true,
-              "UseFovFromPreferences": true,
+              "UseFovFromPreferences": false,
               "UseInputControls": true,
               "UseLookControls": true,
               "WalkSpeed": 110
@@ -322,7 +322,7 @@
                   "__guid": "c8a2bb88-7fa1-46b5-98f3-c48efba0cdef",
                   "BackgroundColor": "0.33333,0.46275,0.52157,1",
                   "ClearFlags": "All",
-                  "FieldOfView": 60,
+                  "FieldOfView": 90,
                   "FovAxis": "Horizontal",
                   "IsMainCamera": true,
                   "OnComponentDestroy": null,
@@ -339,7 +339,7 @@
                   "TargetEye": "None",
                   "Viewport": "0,0,1,1",
                   "ZFar": 10000,
-                  "ZNear": 10
+                  "ZNear": 1
                 }
               ],
               "Children": [
