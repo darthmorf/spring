@@ -108,6 +108,13 @@ namespace Spring.Components
 			UIController.mUIPromptController.SetPromptVisible(InputDef.grab, IsLookingAtObject());
 			UIController.mUIPromptController.SetPromptVisible(InputDef.resetGrabbedRotation, mCurrentState == State.Grabbing && mGrabObject.MustGetComponent<Grabbable>().mCanBeReset);
 
+			UIController.mUIPromptController.SetTextOverride(InputDef.resetGrabbedRotation, Localiser.GetString("ACTION_RESET_ROTATION"));
+
+			if (mCurrentState == State.EmptyHanded)
+				UIController.mUIPromptController.SetTextOverride(InputDef.grab, Localiser.GetString("ACTION_GRAB"));
+			else
+				UIController.mUIPromptController.SetTextOverride(InputDef.grab, Localiser.GetString("ACTION_DROP"));
+
 			if (mGrabRigidBody == null)
 				return;
 

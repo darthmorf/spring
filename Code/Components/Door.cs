@@ -128,6 +128,19 @@ namespace Spring.Components
 			}
 		}
 
+		void IInteractable.OnLookUpdate(ref InteractEvent pEvent)
+		{
+			State potentialState = DetermineOpenCloseDirection(pEvent.mIteractor.WorldPosition);
+			string text = "";
+
+			if (potentialState == State.Closing)
+				text = Localiser.GetString("ACTION_CLOSE");
+			else
+				text = Localiser.GetString("ACTION_OPEN");
+
+			UIController.mUIPromptController.SetTextOverride(InputDef.openDoor, text);
+		}
+
 		void IInteractable.OnLookStart(ref InteractEvent pEvent)
 		{
 			UIController.mUIPromptController.SetPromptVisible(InputDef.openDoor, true);

@@ -10,19 +10,26 @@ namespace Spring.UI.Screen
 		public InputDef mInputDef { get; set; }
 		public bool mVisible { get; set; } = false;
 		public bool mEnabled { get; set; } = true;
+		public string mTextOverride { get; set; } = "";
 
-		public UIInputPrompt(InputAction mInputAction, InputDef mInputDef, bool mVisible = false, bool mEnabled = true)
+		public UIInputPrompt(InputAction mInputAction, InputDef mInputDef, bool mVisible = false, bool mEnabled = true, string mTextOverride = "")
 		{
 			this.mInputAction = mInputAction;
 			this.mInputDef = mInputDef;
 			this.mVisible = mVisible;
 			this.mEnabled = mEnabled;
+			this.mTextOverride = mTextOverride;
 		}
 
 		// Hash of object is used to determine if we need to redraw UI or not
 		public int GetHash()
 		{
-			return System.HashCode.Combine(mInputAction, mInputDef, mVisible, mEnabled);
+			return System.HashCode.Combine(mInputAction, mInputDef, mVisible, mEnabled, mTextOverride);
+		}
+
+		public string GetText()
+		{
+			return mTextOverride == "" ? mInputAction.Name : mTextOverride;
 		}
 	}
 
@@ -64,6 +71,18 @@ namespace Spring.UI.Screen
 				if (uiInputPrompt.mInputDef == pInputType)
 				{
 					uiInputPrompt.mEnabled = pEnabled;
+					return;
+				}
+			}
+		}
+
+		public void SetTextOverride(InputDef pInputType, string pText)
+		{
+			foreach (UIInputPrompt uiInputPrompt in mInputPrompts)
+			{
+				if (uiInputPrompt.mInputDef == pInputType)
+				{
+					uiInputPrompt.mTextOverride = pText;
 					return;
 				}
 			}

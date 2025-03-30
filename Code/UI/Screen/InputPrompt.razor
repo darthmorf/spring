@@ -11,7 +11,7 @@
             {
                 <div class="InputPrompt">
                     <Image class="InputGlyph @(inputPrompt.mEnabled ? "" : "Disabled")" Texture="@UIController.mUIPromptController.GetGlyph(inputPrompt.mInputDef)"/>
-                    <div class="InputPromptName @(inputPrompt.mEnabled ? "" : "Disabled")">@inputPrompt.mInputAction.Name</div>
+                    <div class="InputPromptName @(inputPrompt.mEnabled ? "" : "Disabled")">@inputPrompt.GetText()</div>
                 </div>
             }
         }
