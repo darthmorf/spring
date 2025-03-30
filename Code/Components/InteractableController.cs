@@ -48,8 +48,7 @@ namespace Spring.Components
 		private Rotation mLastCameraRotation = Rotation.Identity;
 		private GameObject mCurrentInteractingObject;
 		private GameObject mLastInteractingObject;
-		private IInteractable mCurrentInteractable;
-		private IInteractable mLastInteractable;
+		private IEnumerable<IInteractable> mInteractables;
 		private InteractEvent mCurrentInteractEvent;
 		private InteractEvent mLastInteractEvent;
 
@@ -65,7 +64,6 @@ namespace Spring.Components
 			UpdateInteractEvents();
 			SignalInteractions(true);
 
-			mLastInteractable = mCurrentInteractable;
 			mLastInteractEvent = mCurrentInteractEvent;
 			mLastInteractingObject = mCurrentInteractingObject;
 		}
@@ -101,13 +99,12 @@ namespace Spring.Components
 			{
 				mCurrentInteractingObject = traceResult.GameObject;
 				Assert.NotNull(mCurrentInteractingObject);
-				mCurrentInteractable = traceResult.GameObject.Components.Get<IInteractable>();
+				mInteractables = mCurrentInteractingObject.GetComponents<IInteractable>();
 
 				// If the object isn't an interactible, ignore
-				if (mCurrentInteractable == null)
+				if (mInteractables.Count() == 0)
 				{
 					mCurrentInteractingObject = null;
-					mCurrentInteractable = null;
 				}
 
 			}
@@ -115,7 +112,6 @@ namespace Spring.Components
 			else
 			{
 				mCurrentInteractingObject = null;
-				mCurrentInteractable = null;
 			}
 		}
 
@@ -151,12 +147,14 @@ namespace Spring.Components
 			{
 				if (mLastInteractingObject != null)
 				{
-					mLastInteractable.OnLookEnd(ref mLastInteractEvent);
+					foreach (IInteractable interactable in mInteractables)
+						interactable.OnLookEnd(ref mLastInteractEvent);
 				}
 
 				if (mCurrentInteractingObject != null)
 				{
-					mCurrentInteractable.OnLookStart(ref mCurrentInteractEvent);
+					foreach (IInteractable interactable in mInteractables)
+						interactable.OnLookStart(ref mCurrentInteractEvent);
 				}
 			}
 
@@ -164,9 +162,15 @@ namespace Spring.Components
 			if (mCurrentInteractingObject != null)
 			{
 				if (pFixedUpdate)
-					mCurrentInteractable.OnLookFixedUpdate(ref mCurrentInteractEvent);
+				{
+					foreach (IInteractable interactable in mInteractables)
+						interactable.OnLookFixedUpdate(ref mCurrentInteractEvent);
+				}
 				else
-					mCurrentInteractable.OnLookUpdate(ref mCurrentInteractEvent);
+				{
+					foreach (IInteractable interactable in mInteractables)
+						interactable.OnLookUpdate(ref mCurrentInteractEvent);
+				}
 			}
 		}
 
