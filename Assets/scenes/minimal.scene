@@ -49,7 +49,7 @@
           },
           "mInteractRaycast": {
             "mColour": "1,0,0,1",
-            "mShow": true,
+            "mShow": false,
             "mLineThickness": 2
           },
           "OnComponentDestroy": null,
@@ -729,12 +729,13 @@
                       "OnComponentStart": null,
                       "OnComponentUpdate": null,
                       "tags": [
-                        "Grabbable"
+                        "Door"
                       ]
                     },
                     {
                       "__type": "Spring.Components.Grabbable",
                       "__guid": "576ed50e-0049-4ac9-88cb-20c78e6d6954",
+                      "mCanBeReset": true,
                       "OnComponentDestroy": null,
                       "OnComponentDisabled": null,
                       "OnComponentEnabled": null,
@@ -915,6 +916,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "ffb9c89b-8865-445a-a479-58b6bcfbb9c3",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -925,6 +927,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "cfbdd459-0663-449c-bd84-ca2980f9b1d4",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1016,6 +1019,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "930c1937-ec96-4e86-9d81-f92048aefb34",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1106,6 +1110,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "df1df0d0-b5fa-4195-8237-03d570cc8063",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1205,6 +1210,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "d38b372c-fa79-452b-807e-4eb377cb640a",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1295,6 +1301,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "6c2be6ab-a446-4605-b9f6-a2e6351e5c8c",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1385,6 +1392,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "c50dc0b1-c85c-42ee-866a-3baa47ec13b3",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1475,6 +1483,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "95d16beb-14e4-44cb-85e2-27ccb447bf5a",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1565,6 +1574,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "37f9ebfe-9eda-440c-b703-3dfdacac91c4",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1655,6 +1665,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "63ee7427-eccd-4fbd-b3b9-75f5fac9a16c",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1745,6 +1756,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "e60990b0-93fb-4c88-b405-23e09ba534cc",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1835,6 +1847,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "7bbf2aad-c73e-4351-92a9-bc2cc55ad1a0",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -1925,6 +1938,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "0642833e-7560-4d2d-8c28-a4b73eb05a1a",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2015,6 +2029,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "8f5c1645-1183-4c7f-b16c-f5fbe4a348dd",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2114,6 +2129,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "5b5047eb-c00f-455c-be8a-226321dde230",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2204,6 +2220,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "a9b1feb2-9249-4183-b108-3f7b8793de9b",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2294,6 +2311,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "ccd224da-b1fb-446b-8b88-ca7047499ee3",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2384,6 +2402,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "bccb346c-8cea-43e7-a15d-35c91929b125",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2474,6 +2493,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "1f5ad2bd-043f-4b87-b912-f6ee93884ccf",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2564,6 +2584,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "b7c72c3f-9aa9-4172-be5b-86df066cea37",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2654,6 +2675,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "35509804-dc8b-4ae0-b608-512910b08c9a",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2744,6 +2766,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "02a0e915-d4a2-46e3-8120-bc2515deb865",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2834,6 +2857,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "a292b48c-6dbf-462d-bca4-32139e9ea017",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -2924,6 +2948,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "0f54272c-0295-49e5-bfcc-24f00bc0eb0a",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3023,6 +3048,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "2c383d96-4caf-4119-b5d2-28453809d8c1",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3113,6 +3139,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "9053bf51-75f3-4266-b21e-a4bf2f80d677",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3203,6 +3230,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "4d846aff-f08e-4e77-8bb1-0d832a73f594",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3293,6 +3321,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "896f4782-1c3f-449b-82dd-f465051f6b4e",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3383,6 +3412,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "1d0dbc76-a966-49c9-91d2-074d869e59df",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3473,6 +3503,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "7cca2fd7-b641-44e5-833c-f10251fa3555",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3563,6 +3594,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "1622647f-628b-4629-ba0c-e320c40f5b5d",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3653,6 +3685,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "0fe51e2c-0ed2-4a88-ac71-1b12c5c1afd7",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3743,6 +3776,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "87b8ac54-9832-436f-b9c1-9a076fb01176",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3833,6 +3867,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "5c3e6f8f-fbb9-4d8e-93db-2178b2d1ec7a",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -3933,6 +3968,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "8eb6ea88-851e-47aa-bdfd-1641e2842524",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -4023,6 +4059,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "6317bc73-e304-4949-9f93-ec4dec1ec471",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -4113,6 +4150,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "4a602df1-3ac9-4a77-a5a8-bd918fc7ee1e",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -4203,6 +4241,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "e5a5ca03-9bb1-4bf1-9fe4-9baf27f62e86",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -4294,6 +4333,7 @@
                         {
                           "__type": "Spring.Components.Grabbable",
                           "__guid": "528697f0-475e-430e-920e-38a24d4612fb",
+                          "mCanBeReset": true,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -4659,6 +4699,7 @@
                     {
                       "__type": "Spring.Components.Grabbable",
                       "__guid": "679167bb-927c-40f2-b4a9-1986d1c5cdb8",
+                      "mCanBeReset": true,
                       "OnComponentDestroy": null,
                       "OnComponentDisabled": null,
                       "OnComponentEnabled": null,
@@ -4750,6 +4791,7 @@
                     {
                       "__type": "Spring.Components.Grabbable",
                       "__guid": "31b3a435-93d5-4ebb-912c-c866b502b9f9",
+                      "mCanBeReset": true,
                       "OnComponentDestroy": null,
                       "OnComponentDisabled": null,
                       "OnComponentEnabled": null,
@@ -4841,6 +4883,7 @@
                     {
                       "__type": "Spring.Components.Grabbable",
                       "__guid": "6d69f1e0-ab8c-43e4-897d-9c64188680ee",
+                      "mCanBeReset": true,
                       "OnComponentDestroy": null,
                       "OnComponentDisabled": null,
                       "OnComponentEnabled": null,
@@ -4932,6 +4975,7 @@
                     {
                       "__type": "Spring.Components.Grabbable",
                       "__guid": "16b03936-ff76-4a11-ac38-f7db39c676b2",
+                      "mCanBeReset": true,
                       "OnComponentDestroy": null,
                       "OnComponentDisabled": null,
                       "OnComponentEnabled": null,
@@ -5133,7 +5177,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -5227,7 +5271,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -5321,7 +5365,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -5415,7 +5459,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -5509,7 +5553,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -5603,7 +5647,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -5697,7 +5741,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -5791,7 +5835,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -5885,7 +5929,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -5979,7 +6023,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -6073,7 +6117,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -6167,7 +6211,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -6261,7 +6305,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -6355,7 +6399,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -6449,7 +6493,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -6543,7 +6587,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -6637,7 +6681,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -6731,7 +6775,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -6825,7 +6869,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -6919,7 +6963,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7022,7 +7066,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7116,7 +7160,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7210,7 +7254,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7304,7 +7348,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7398,7 +7442,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7492,7 +7536,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7586,7 +7630,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7680,7 +7724,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7774,7 +7818,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7868,7 +7912,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -7962,7 +8006,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -8056,7 +8100,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -8150,7 +8194,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -8244,7 +8288,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -8338,7 +8382,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -8432,7 +8476,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -8526,7 +8570,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -8620,7 +8664,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -8714,7 +8758,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -8808,7 +8852,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -8911,7 +8955,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9005,7 +9049,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9099,7 +9143,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9193,7 +9237,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9287,7 +9331,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9381,7 +9425,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9475,7 +9519,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9569,7 +9613,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9663,7 +9707,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9757,7 +9801,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9851,7 +9895,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -9945,7 +9989,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -10039,7 +10083,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -10133,7 +10177,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -10227,7 +10271,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -10321,7 +10365,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -10415,7 +10459,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -10509,7 +10553,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -10603,7 +10647,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -10697,7 +10741,7 @@
                               "OnComponentStart": null,
                               "OnComponentUpdate": null,
                               "tags": [
-                                "Grabbable"
+                                "Door"
                               ]
                             }
                           ]
@@ -10793,7 +10837,7 @@
                           "OnComponentStart": null,
                           "OnComponentUpdate": null,
                           "tags": [
-                            "Grabbable"
+                            "Door"
                           ]
                         }
                       ]
@@ -11004,15 +11048,17 @@
                           "OnComponentStart": null,
                           "OnComponentUpdate": null,
                           "tags": [
-                            "Door"
+                            1
                           ]
                         },
                         {
                           "__type": "Spring.Components.Door",
                           "__guid": "740a661a-fa5b-4f51-8486-9bfe2dde03d8",
                           "mClosedAngle": 0,
+                          "mClosedThresholdAngle": 2,
                           "mCurrentState": "Closed",
                           "mMinDuration": 0.1,
+                          "mMonoDirectional": false,
                           "mOpenInAngle": -90,
                           "mOpenOutAngle": 90,
                           "mSticky": false,
@@ -11026,7 +11072,8 @@
                         },
                         {
                           "__type": "Spring.Components.Grabbable",
-                          "__guid": "fc0b36cf-5ae0-4250-a96b-523b90cf3e9e",
+                          "__guid": "dcc11000-bdea-4b9a-be45-d1bb3134777e",
+                          "mCanBeReset": false,
                           "OnComponentDestroy": null,
                           "OnComponentDisabled": null,
                           "OnComponentEnabled": null,
@@ -11052,6 +11099,866 @@
                               "Body": {
                                 "_type": "gameobject",
                                 "go": "606acb2a-e2cd-4574-ac24-9d0cb16ac4ac"
+                              },
+                              "BreakForce": 0,
+                              "BreakTorque": 0,
+                              "DampingRatio": 2,
+                              "EnableCollision": true,
+                              "Frequency": 2.5,
+                              "Friction": 0.15,
+                              "LocalFrame1": {
+                                "Position": "0,20,0",
+                                "Scale": "0.25,1,1",
+                                "Rotation": "0,0,0,1"
+                              },
+                              "LocalFrame2": {
+                                "Position": "0,-25.10001,2.5",
+                                "Scale": "0.25,1,1",
+                                "Rotation": "0,0,0,1"
+                              },
+                              "MaxAngle": 95,
+                              "MaxTorque": 0,
+                              "MinAngle": -95,
+                              "Motor": "Disabled",
+                              "OnBreak": null,
+                              "OnComponentDestroy": null,
+                              "OnComponentDisabled": null,
+                              "OnComponentEnabled": null,
+                              "OnComponentFixedUpdate": null,
+                              "OnComponentStart": null,
+                              "OnComponentUpdate": null,
+                              "StartBroken": false,
+                              "TargetAngle": 0,
+                              "TargetVelocity": 0
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "__guid": "ec99eb92-d8cd-4824-82a5-57c6ba639a1a",
+                  "Flags": 0,
+                  "Name": "Door",
+                  "Position": "516.0231,-230.1589,0",
+                  "Rotation": "0,-0,-0.3826835,0.9238795",
+                  "Enabled": true,
+                  "Children": [
+                    {
+                      "__guid": "8b0f2ee1-2bc1-42a9-af23-4edef6cb1a5a",
+                      "Flags": 0,
+                      "Name": "Frame A",
+                      "Position": "5,25,62.5",
+                      "Scale": "0.1,1,2.5",
+                      "Enabled": true,
+                      "Components": [
+                        {
+                          "__type": "Sandbox.ModelRenderer",
+                          "__guid": "d29dac81-8368-4e23-b3b9-7437050c9628",
+                          "BodyGroups": 18446744073709551615,
+                          "CreateAttachments": false,
+                          "MaterialGroup": null,
+                          "MaterialOverride": "materials/kenney-prototype/dark-01.vmat",
+                          "Model": "models/dev/box.vmdl",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
+                          "RenderType": "On",
+                          "Tint": "1,1,1,1"
+                        },
+                        {
+                          "__type": "Sandbox.BoxCollider",
+                          "__guid": "c82dcfa7-91b1-4a39-9792-5a334cad7f99",
+                          "Center": "0,0,0",
+                          "Friction": null,
+                          "IsTrigger": false,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OnObjectTriggerEnter": null,
+                          "OnObjectTriggerExit": null,
+                          "OnTriggerEnter": null,
+                          "OnTriggerExit": null,
+                          "Scale": "50,50,50",
+                          "Static": false,
+                          "Surface": null,
+                          "SurfaceVelocity": "0,0,0"
+                        }
+                      ]
+                    },
+                    {
+                      "__guid": "e924136e-1016-4b70-b424-1b53ad6d31ab",
+                      "Flags": 0,
+                      "Name": "Frame B",
+                      "Position": "5,-65.46085,62.5",
+                      "Scale": "0.1,1,2.5",
+                      "Enabled": true,
+                      "Components": [
+                        {
+                          "__type": "Sandbox.ModelRenderer",
+                          "__guid": "2e459c70-4c92-4394-82d9-204ec9c1a532",
+                          "BodyGroups": 18446744073709551615,
+                          "CreateAttachments": false,
+                          "MaterialGroup": null,
+                          "MaterialOverride": "materials/kenney-prototype/dark-01.vmat",
+                          "Model": "models/dev/box.vmdl",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
+                          "RenderType": "On",
+                          "Tint": "1,1,1,1"
+                        },
+                        {
+                          "__type": "Sandbox.BoxCollider",
+                          "__guid": "78094788-8e96-4e63-bbaa-712be557f3bf",
+                          "Center": "0,0,0",
+                          "Friction": null,
+                          "IsTrigger": false,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OnObjectTriggerEnter": null,
+                          "OnObjectTriggerExit": null,
+                          "OnTriggerEnter": null,
+                          "OnTriggerExit": null,
+                          "Scale": "50,50,50",
+                          "Static": false,
+                          "Surface": null,
+                          "SurfaceVelocity": "0,0,0"
+                        }
+                      ]
+                    },
+                    {
+                      "__guid": "06427dd5-2c24-48a0-9d98-5105dd1908a8",
+                      "Flags": 0,
+                      "Name": "Door",
+                      "Position": "5,-20.1,65",
+                      "Scale": "0.025,0.8,2",
+                      "Enabled": true,
+                      "Components": [
+                        {
+                          "__type": "Sandbox.ModelRenderer",
+                          "__guid": "48016e3f-65eb-4f3f-a3ce-913247ebb729",
+                          "BodyGroups": 18446744073709551615,
+                          "CreateAttachments": false,
+                          "MaterialGroup": null,
+                          "MaterialOverride": "materials/kenney-prototype/blue-02.vmat",
+                          "Model": "models/dev/box.vmdl",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
+                          "RenderType": "On",
+                          "Tint": "1,1,1,1"
+                        },
+                        {
+                          "__type": "Sandbox.BoxCollider",
+                          "__guid": "e0b44397-6b52-4066-b3db-431661e7cc06",
+                          "Center": "0,0,0",
+                          "Friction": null,
+                          "IsTrigger": false,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OnObjectTriggerEnter": null,
+                          "OnObjectTriggerExit": null,
+                          "OnTriggerEnter": null,
+                          "OnTriggerExit": null,
+                          "Scale": "50,50,50",
+                          "Static": false,
+                          "Surface": null,
+                          "SurfaceVelocity": "0,0,0"
+                        },
+                        {
+                          "__type": "Sandbox.Rigidbody",
+                          "__guid": "63b53c7b-9291-4a02-b72e-0f7008293f3d",
+                          "AngularDamping": 0,
+                          "Gravity": true,
+                          "LinearDamping": 0,
+                          "Locking": {
+                            "X": false,
+                            "Y": false,
+                            "Z": false,
+                            "Pitch": false,
+                            "Yaw": false,
+                            "Roll": false
+                          },
+                          "MassCenterOverride": "0,25,0",
+                          "MassOverride": 0,
+                          "MotionEnabled": true,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OverrideMassCenter": false,
+                          "RigidbodyFlags": 0,
+                          "StartAsleep": false
+                        },
+                        {
+                          "__type": "Spring.Utils.TagApplier",
+                          "__guid": "c91c7187-0d40-4bfe-9d90-2a9325502111",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "tags": [
+                            1
+                          ]
+                        },
+                        {
+                          "__type": "Spring.Components.Door",
+                          "__guid": "002d71d3-036a-4b40-a8df-c75897824097",
+                          "mClosedAngle": 0,
+                          "mClosedThresholdAngle": 2,
+                          "mCurrentState": "Closed",
+                          "mMinDuration": 0.1,
+                          "mMonoDirectional": true,
+                          "mOpenInAngle": 0,
+                          "mOpenOutAngle": 90,
+                          "mSticky": false,
+                          "mStoppedVelocity": 0.1,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null
+                        },
+                        {
+                          "__type": "Spring.Components.Grabbable",
+                          "__guid": "89465aaf-da56-4a97-9e67-98da037b1294",
+                          "mCanBeReset": false,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null
+                        }
+                      ],
+                      "Children": [
+                        {
+                          "__guid": "9c09c1b4-57e3-4346-9f7c-ee9429f9645a",
+                          "Flags": 0,
+                          "Name": "Hinge",
+                          "Position": "0,25,-0.0000003563792",
+                          "Scale": "10,1.25,0.5",
+                          "Enabled": true,
+                          "Components": [
+                            {
+                              "__type": "Sandbox.HingeJoint",
+                              "__guid": "438002b7-a6f3-4f60-b74b-f269ac5bcc95",
+                              "__version": 1,
+                              "Attachment": "LocalFrames",
+                              "Body": {
+                                "_type": "gameobject",
+                                "go": "8b0f2ee1-2bc1-42a9-af23-4edef6cb1a5a"
+                              },
+                              "BreakForce": 0,
+                              "BreakTorque": 0,
+                              "DampingRatio": 2,
+                              "EnableCollision": true,
+                              "Frequency": 2.5,
+                              "Friction": 0.15,
+                              "LocalFrame1": {
+                                "Position": "0,20,0",
+                                "Scale": "0.25,1,1",
+                                "Rotation": "0,0,0,1"
+                              },
+                              "LocalFrame2": {
+                                "Position": "0,-25.10001,2.5",
+                                "Scale": "0.25,1,1",
+                                "Rotation": "0,0,0,1"
+                              },
+                              "MaxAngle": 95,
+                              "MaxTorque": 0,
+                              "MinAngle": 0,
+                              "Motor": "Disabled",
+                              "OnBreak": null,
+                              "OnComponentDestroy": null,
+                              "OnComponentDisabled": null,
+                              "OnComponentEnabled": null,
+                              "OnComponentFixedUpdate": null,
+                              "OnComponentStart": null,
+                              "OnComponentUpdate": null,
+                              "StartBroken": false,
+                              "TargetAngle": 0,
+                              "TargetVelocity": 0
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "__guid": "37004ff4-9b0d-4992-bf29-f9390f3dcfdc",
+                  "Flags": 0,
+                  "Name": "Door",
+                  "Position": "505.6882,-525.7875,0",
+                  "Rotation": "0,0,0.7071068,0.7071068",
+                  "Enabled": true,
+                  "Children": [
+                    {
+                      "__guid": "c4168cc0-c2bd-477e-b277-ba5e18d962c6",
+                      "Flags": 0,
+                      "Name": "Frame A",
+                      "Position": "5,25,62.5",
+                      "Scale": "0.1,1,2.5",
+                      "Enabled": true,
+                      "Components": [
+                        {
+                          "__type": "Sandbox.ModelRenderer",
+                          "__guid": "b38a31cc-ff69-4925-9f8c-4b1bf6338c83",
+                          "BodyGroups": 18446744073709551615,
+                          "CreateAttachments": false,
+                          "MaterialGroup": null,
+                          "MaterialOverride": "materials/kenney-prototype/dark-01.vmat",
+                          "Model": "models/dev/box.vmdl",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
+                          "RenderType": "On",
+                          "Tint": "1,1,1,1"
+                        },
+                        {
+                          "__type": "Sandbox.BoxCollider",
+                          "__guid": "6e8cb469-1ba8-490b-9f74-e1a139a8bc68",
+                          "Center": "0,0,0",
+                          "Friction": null,
+                          "IsTrigger": false,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OnObjectTriggerEnter": null,
+                          "OnObjectTriggerExit": null,
+                          "OnTriggerEnter": null,
+                          "OnTriggerExit": null,
+                          "Scale": "50,50,50",
+                          "Static": false,
+                          "Surface": null,
+                          "SurfaceVelocity": "0,0,0"
+                        }
+                      ]
+                    },
+                    {
+                      "__guid": "eedd28bf-f5b4-4028-acf3-788797cbd676",
+                      "Flags": 0,
+                      "Name": "Frame B",
+                      "Position": "5,-65.46085,62.5",
+                      "Scale": "0.1,1,2.5",
+                      "Enabled": true,
+                      "Components": [
+                        {
+                          "__type": "Sandbox.ModelRenderer",
+                          "__guid": "40e90bda-431b-4fc6-bd66-5b9c358765a8",
+                          "BodyGroups": 18446744073709551615,
+                          "CreateAttachments": false,
+                          "MaterialGroup": null,
+                          "MaterialOverride": "materials/kenney-prototype/dark-01.vmat",
+                          "Model": "models/dev/box.vmdl",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
+                          "RenderType": "On",
+                          "Tint": "1,1,1,1"
+                        },
+                        {
+                          "__type": "Sandbox.BoxCollider",
+                          "__guid": "869f0adc-2f20-492d-9293-878d89524f21",
+                          "Center": "0,0,0",
+                          "Friction": null,
+                          "IsTrigger": false,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OnObjectTriggerEnter": null,
+                          "OnObjectTriggerExit": null,
+                          "OnTriggerEnter": null,
+                          "OnTriggerExit": null,
+                          "Scale": "50,50,50",
+                          "Static": false,
+                          "Surface": null,
+                          "SurfaceVelocity": "0,0,0"
+                        }
+                      ]
+                    },
+                    {
+                      "__guid": "6a57de52-4b60-44b3-aa0a-86c6238b88e1",
+                      "Flags": 0,
+                      "Name": "Door",
+                      "Position": "5,-20.1,65",
+                      "Scale": "0.025,0.8,2",
+                      "Enabled": true,
+                      "Components": [
+                        {
+                          "__type": "Sandbox.ModelRenderer",
+                          "__guid": "48e40bd3-9117-4fed-8946-aa2efe7729c5",
+                          "BodyGroups": 18446744073709551615,
+                          "CreateAttachments": false,
+                          "MaterialGroup": null,
+                          "MaterialOverride": "materials/kenney-prototype/orange-02.vmat",
+                          "Model": "models/dev/box.vmdl",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
+                          "RenderType": "On",
+                          "Tint": "1,1,1,1"
+                        },
+                        {
+                          "__type": "Sandbox.BoxCollider",
+                          "__guid": "c7b59ef4-7eca-487f-8358-7e8d8a5a5452",
+                          "Center": "0,0,0",
+                          "Friction": null,
+                          "IsTrigger": false,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OnObjectTriggerEnter": null,
+                          "OnObjectTriggerExit": null,
+                          "OnTriggerEnter": null,
+                          "OnTriggerExit": null,
+                          "Scale": "50,50,50",
+                          "Static": false,
+                          "Surface": null,
+                          "SurfaceVelocity": "0,0,0"
+                        },
+                        {
+                          "__type": "Sandbox.Rigidbody",
+                          "__guid": "e2501c4e-4685-4530-ae79-0c7243c9ebde",
+                          "AngularDamping": 0,
+                          "Gravity": true,
+                          "LinearDamping": 0,
+                          "Locking": {
+                            "X": false,
+                            "Y": false,
+                            "Z": false,
+                            "Pitch": false,
+                            "Yaw": false,
+                            "Roll": false
+                          },
+                          "MassCenterOverride": "0,25,0",
+                          "MassOverride": 0,
+                          "MotionEnabled": true,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OverrideMassCenter": false,
+                          "RigidbodyFlags": 0,
+                          "StartAsleep": false
+                        },
+                        {
+                          "__type": "Spring.Utils.TagApplier",
+                          "__guid": "8288b340-8b9b-4b9b-9a78-788bb3263bcc",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "tags": [
+                            1
+                          ]
+                        },
+                        {
+                          "__type": "Spring.Components.Door",
+                          "__guid": "d4c8d2e7-380d-46cd-8447-87a2a88b312a",
+                          "mClosedAngle": 0,
+                          "mClosedThresholdAngle": 2,
+                          "mCurrentState": "Closed",
+                          "mMinDuration": 0.1,
+                          "mMonoDirectional": false,
+                          "mOpenInAngle": -90,
+                          "mOpenOutAngle": 90,
+                          "mSticky": true,
+                          "mStoppedVelocity": 0.1,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null
+                        }
+                      ],
+                      "Children": [
+                        {
+                          "__guid": "1d90dcc6-7475-47b4-9224-6f55a4edb80a",
+                          "Flags": 0,
+                          "Name": "Hinge",
+                          "Position": "0,25,-0.0000003563792",
+                          "Scale": "10,1.25,0.5",
+                          "Enabled": true,
+                          "Components": [
+                            {
+                              "__type": "Sandbox.HingeJoint",
+                              "__guid": "db6fb5cb-6886-4e71-8ab3-5710af102e64",
+                              "__version": 1,
+                              "Attachment": "LocalFrames",
+                              "Body": {
+                                "_type": "gameobject",
+                                "go": "c4168cc0-c2bd-477e-b277-ba5e18d962c6"
+                              },
+                              "BreakForce": 0,
+                              "BreakTorque": 0,
+                              "DampingRatio": 2,
+                              "EnableCollision": true,
+                              "Frequency": 2.5,
+                              "Friction": 0.15,
+                              "LocalFrame1": {
+                                "Position": "0,20,0",
+                                "Scale": "0.25,1,1",
+                                "Rotation": "0,0,0,1"
+                              },
+                              "LocalFrame2": {
+                                "Position": "0,-25.10001,2.5",
+                                "Scale": "0.25,1,1",
+                                "Rotation": "0,0,0,1"
+                              },
+                              "MaxAngle": 95,
+                              "MaxTorque": 0,
+                              "MinAngle": -95,
+                              "Motor": "Disabled",
+                              "OnBreak": null,
+                              "OnComponentDestroy": null,
+                              "OnComponentDisabled": null,
+                              "OnComponentEnabled": null,
+                              "OnComponentFixedUpdate": null,
+                              "OnComponentStart": null,
+                              "OnComponentUpdate": null,
+                              "StartBroken": false,
+                              "TargetAngle": 0,
+                              "TargetVelocity": 0
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "__guid": "044b0ebb-0744-4dff-b3d3-d53e19ec1b45",
+                  "Flags": 0,
+                  "Name": "Door",
+                  "Position": "658.1382,-452.6717,0",
+                  "Rotation": "0,-0,-0.3826835,0.9238795",
+                  "Enabled": true,
+                  "Children": [
+                    {
+                      "__guid": "a31d8784-a502-43af-8470-3345ecee6829",
+                      "Flags": 0,
+                      "Name": "Frame A",
+                      "Position": "5,25,62.5",
+                      "Scale": "0.1,1,2.5",
+                      "Enabled": true,
+                      "Components": [
+                        {
+                          "__type": "Sandbox.ModelRenderer",
+                          "__guid": "5c8da2d9-27ea-4801-9358-f224c01b8cf5",
+                          "BodyGroups": 18446744073709551615,
+                          "CreateAttachments": false,
+                          "MaterialGroup": null,
+                          "MaterialOverride": "materials/kenney-prototype/dark-01.vmat",
+                          "Model": "models/dev/box.vmdl",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
+                          "RenderType": "On",
+                          "Tint": "1,1,1,1"
+                        },
+                        {
+                          "__type": "Sandbox.BoxCollider",
+                          "__guid": "3b2b18ed-a813-494a-b208-2f22808a5520",
+                          "Center": "0,0,0",
+                          "Friction": null,
+                          "IsTrigger": false,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OnObjectTriggerEnter": null,
+                          "OnObjectTriggerExit": null,
+                          "OnTriggerEnter": null,
+                          "OnTriggerExit": null,
+                          "Scale": "50,50,50",
+                          "Static": false,
+                          "Surface": null,
+                          "SurfaceVelocity": "0,0,0"
+                        }
+                      ]
+                    },
+                    {
+                      "__guid": "4f0c86da-67d0-48d5-92ad-85c292ffc33f",
+                      "Flags": 0,
+                      "Name": "Frame B",
+                      "Position": "5,-65.46085,62.5",
+                      "Scale": "0.1,1,2.5",
+                      "Enabled": true,
+                      "Components": [
+                        {
+                          "__type": "Sandbox.ModelRenderer",
+                          "__guid": "e98ed9d7-efee-465b-8703-242b607d1614",
+                          "BodyGroups": 18446744073709551615,
+                          "CreateAttachments": false,
+                          "MaterialGroup": null,
+                          "MaterialOverride": "materials/kenney-prototype/dark-01.vmat",
+                          "Model": "models/dev/box.vmdl",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
+                          "RenderType": "On",
+                          "Tint": "1,1,1,1"
+                        },
+                        {
+                          "__type": "Sandbox.BoxCollider",
+                          "__guid": "27f78f8a-20cb-4c38-853a-155da69cd4f8",
+                          "Center": "0,0,0",
+                          "Friction": null,
+                          "IsTrigger": false,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OnObjectTriggerEnter": null,
+                          "OnObjectTriggerExit": null,
+                          "OnTriggerEnter": null,
+                          "OnTriggerExit": null,
+                          "Scale": "50,50,50",
+                          "Static": false,
+                          "Surface": null,
+                          "SurfaceVelocity": "0,0,0"
+                        }
+                      ]
+                    },
+                    {
+                      "__guid": "107a89b6-ce50-4913-8eaf-c9c3c5651193",
+                      "Flags": 0,
+                      "Name": "Door",
+                      "Position": "5,-20.1,65",
+                      "Scale": "0.025,0.8,2",
+                      "Enabled": true,
+                      "Components": [
+                        {
+                          "__type": "Sandbox.ModelRenderer",
+                          "__guid": "6693b276-9064-42a3-977a-c409d30761f8",
+                          "BodyGroups": 18446744073709551615,
+                          "CreateAttachments": false,
+                          "MaterialGroup": null,
+                          "MaterialOverride": "materials/kenney-prototype/orange-02.vmat",
+                          "Model": "models/dev/box.vmdl",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "RenderOptions": {
+                            "GameLayer": true,
+                            "OverlayLayer": false,
+                            "BloomLayer": false,
+                            "AfterUILayer": false
+                          },
+                          "RenderType": "On",
+                          "Tint": "1,1,1,1"
+                        },
+                        {
+                          "__type": "Sandbox.BoxCollider",
+                          "__guid": "1fd0435a-2f54-4faa-9ac2-c64a28866b13",
+                          "Center": "0,0,0",
+                          "Friction": null,
+                          "IsTrigger": false,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OnObjectTriggerEnter": null,
+                          "OnObjectTriggerExit": null,
+                          "OnTriggerEnter": null,
+                          "OnTriggerExit": null,
+                          "Scale": "50,50,50",
+                          "Static": false,
+                          "Surface": null,
+                          "SurfaceVelocity": "0,0,0"
+                        },
+                        {
+                          "__type": "Sandbox.Rigidbody",
+                          "__guid": "d7ed453a-6e20-4bd3-b100-5e570f2acc35",
+                          "AngularDamping": 0,
+                          "Gravity": true,
+                          "LinearDamping": 0,
+                          "Locking": {
+                            "X": false,
+                            "Y": false,
+                            "Z": false,
+                            "Pitch": false,
+                            "Yaw": false,
+                            "Roll": false
+                          },
+                          "MassCenterOverride": "0,25,0",
+                          "MassOverride": 0,
+                          "MotionEnabled": true,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "OverrideMassCenter": false,
+                          "RigidbodyFlags": 0,
+                          "StartAsleep": false
+                        },
+                        {
+                          "__type": "Spring.Utils.TagApplier",
+                          "__guid": "7a558cdf-475f-453f-a4a9-fdc5c31485bd",
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null,
+                          "tags": [
+                            1
+                          ]
+                        },
+                        {
+                          "__type": "Spring.Components.Door",
+                          "__guid": "dd824c36-6680-464d-8095-0c2c7c9a7dd1",
+                          "mClosedAngle": 0,
+                          "mClosedThresholdAngle": 2,
+                          "mCurrentState": "Closed",
+                          "mMinDuration": 0.1,
+                          "mMonoDirectional": false,
+                          "mOpenInAngle": -90,
+                          "mOpenOutAngle": 90,
+                          "mSticky": false,
+                          "mStoppedVelocity": 0.1,
+                          "OnComponentDestroy": null,
+                          "OnComponentDisabled": null,
+                          "OnComponentEnabled": null,
+                          "OnComponentFixedUpdate": null,
+                          "OnComponentStart": null,
+                          "OnComponentUpdate": null
+                        }
+                      ],
+                      "Children": [
+                        {
+                          "__guid": "12c21720-06a2-4e1b-b7e3-e03afba94d7b",
+                          "Flags": 0,
+                          "Name": "Hinge",
+                          "Position": "0,25,-0.0000003563792",
+                          "Scale": "10,1.25,0.5",
+                          "Enabled": true,
+                          "Components": [
+                            {
+                              "__type": "Sandbox.HingeJoint",
+                              "__guid": "6f419135-9dca-4c10-8954-256b4d6d4aa6",
+                              "__version": 1,
+                              "Attachment": "LocalFrames",
+                              "Body": {
+                                "_type": "gameobject",
+                                "go": "a31d8784-a502-43af-8470-3345ecee6829"
                               },
                               "BreakForce": 0,
                               "BreakTorque": 0,
@@ -12289,7 +13196,7 @@
                       "OnComponentStart": null,
                       "OnComponentUpdate": null,
                       "tags": [
-                        "Grabbable"
+                        "Door"
                       ]
                     }
                   ]
@@ -12383,7 +13290,7 @@
                       "OnComponentStart": null,
                       "OnComponentUpdate": null,
                       "tags": [
-                        "Grabbable"
+                        "Door"
                       ]
                     }
                   ]
@@ -12476,7 +13383,7 @@
                       "OnComponentStart": null,
                       "OnComponentUpdate": null,
                       "tags": [
-                        "Grabbable"
+                        "Door"
                       ]
                     }
                   ]
@@ -12612,7 +13519,7 @@
                       "OnComponentStart": null,
                       "OnComponentUpdate": null,
                       "tags": [
-                        "Grabbable"
+                        "Door"
                       ]
                     }
                   ]
@@ -12706,7 +13613,7 @@
                       "OnComponentStart": null,
                       "OnComponentUpdate": null,
                       "tags": [
-                        "Grabbable"
+                        "Door"
                       ]
                     }
                   ]
@@ -12799,7 +13706,7 @@
                       "OnComponentStart": null,
                       "OnComponentUpdate": null,
                       "tags": [
-                        "Grabbable"
+                        "Door"
                       ]
                     }
                   ]

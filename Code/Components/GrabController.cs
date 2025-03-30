@@ -106,7 +106,7 @@ namespace Spring.Components
 		{
 			UIController.mUIPromptController.SetPromptEnabled(InputDef.grab, !StandingOnGrababble());
 			UIController.mUIPromptController.SetPromptVisible(InputDef.grab, IsLookingAtObject());
-			UIController.mUIPromptController.SetPromptVisible(InputDef.resetGrabbedRotation, mCurrentState == State.Grabbing);
+			UIController.mUIPromptController.SetPromptVisible(InputDef.resetGrabbedRotation, mCurrentState == State.Grabbing && mGrabObject.MustGetComponent<Grabbable>().mCanBeReset);
 
 			if (mGrabRigidBody == null)
 				return;
@@ -209,6 +209,9 @@ namespace Spring.Components
 
 		private bool WantsToRotateGrabbed()
 		{
+			if (!mGrabObject.MustGetComponent<Grabbable>().mCanBeReset)
+				return false;
+
 			return Sandbox.Input.Pressed(InputDef.resetGrabbedRotation.ToString());
 		}
 
@@ -239,6 +242,10 @@ namespace Spring.Components
 	// Simple class that forwards the interactable events from the grabbed object back to the GrabbableController
 	class Grabbable : Component, IInteractable
 	{
+		// Config Params
+		[Property, Title("Resettable")]
+		public bool mCanBeReset = true;
+
 		// State
 		GrabController mCurrentGrabController;
 
@@ -250,7 +257,8 @@ namespace Spring.Components
 
 		void IInteractable.OnLookEnd(ref InteractEvent pEvent)
 		{
-			mCurrentGrabController.OnLookEnd();
+			if (mCurrentGrabController != null)
+				mCurrentGrabController.OnLookEnd();
 		}
 	}
 }

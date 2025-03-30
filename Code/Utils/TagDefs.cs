@@ -4,7 +4,7 @@ namespace Spring.Utils
 {
 	public enum Tag
 	{
-		
+		Door
 	}
 
 	// Applies a list of tags to a component OnAwake - this avoids typing arbitrary strings for the tags
