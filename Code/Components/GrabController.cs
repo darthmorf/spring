@@ -9,10 +9,8 @@ using Sandbox;
 namespace Spring.Components
 {
     class GrabController : Component
-    {
+	{
 		// Config Properties
-		[Property, Category("Grab"), Title("Range")]
-		private float mGrabRange = 100f;
 		[Property, Category("Grab"), Title("Force")]
 		private float mGrabForce = 100f;
 		[Property, Category("Grab"), Title("Min Force Distance")]
@@ -32,8 +30,6 @@ namespace Spring.Components
 			GrabbedRotate
 		}
 		private State mCurrentState;
-		private Vector3 mLastCameraPosition = Vector3.Zero;
-		private Rotation mLastCameraRotation = Rotation.Identity;
 		private Rotation mGrabStartObjectRotation = Rotation.Identity;
 		private Rotation mGrabStartCameraRotation = Rotation.Identity;
 		private GameObject mGrabObject = null;
@@ -60,13 +56,10 @@ namespace Spring.Components
 
 		protected override void OnFixedUpdate()
 		{
-			// If we're not currently grabbing anything, find something to grab
 			if (mCurrentState == State.EmptyHanded)
 			{
-				FindGrabbable();
-
-				// and grab it (if we want to)
-				if (WantsToGrabOrDrop() && CanGrab() && !StandingOnGrababble())
+				// If we have something to grab and want to, grab it. Interact logic is handled by InteractableController + Grabbable classes
+				if (WantsToGrabOrDrop() && IsLookingAtObject() && !StandingOnGrababble())
 					Grab(mGrabObject);
 			}
 			else if (mCurrentState == State.Grabbing || mCurrentState == State.GrabbedRotate)
@@ -93,10 +86,26 @@ namespace Spring.Components
 			}
 		}
 
+		public void OnLookStart(GameObject pLookingAtObject)
+		{
+			if (mCurrentState == State.EmptyHanded) // If we're already grabbing an object, we don't want something else stealing the grab
+			{ 
+				UpdateGrabbable(pLookingAtObject);
+			}
+		}
+
+		public void OnLookEnd()
+		{
+			if (mCurrentState == State.EmptyHanded) // If we're already grabbing an object, ignore our camera temporarily looking away
+			{
+				UpdateGrabbable(null);
+			}
+		}
+
 		private void ShowGrabbable()
 		{
 			UIController.mUIPromptController.SetPromptEnabled(InputDef.grab, !StandingOnGrababble());
-			UIController.mUIPromptController.SetPromptVisible(InputDef.grab, CanGrab());
+			UIController.mUIPromptController.SetPromptVisible(InputDef.grab, IsLookingAtObject());
 			UIController.mUIPromptController.SetPromptVisible(InputDef.resetGrabbedRotation, mCurrentState == State.Grabbing);
 
 			if (mGrabRigidBody == null)
@@ -127,32 +136,12 @@ namespace Spring.Components
 			mGrabbedDistance = source.Distance(mGrabObject.WorldPosition);
 		}
 
-		// Attempts to find an object with the Grabbable tag via raycast
-		private void FindGrabbable()
+		// Updates the current grabbable item based of raycast in InteractibleController
+		private void UpdateGrabbable(GameObject pGameObject)
 		{
-			Vector3 source = GetSourcePos();
-			Rotation cameraRotation = mPlayerController.EyeAngles.ToRotation();
-
-			// If the camera hasn't moved, don't bother raycasting again
-			if (mLastCameraPosition == source && mLastCameraRotation == cameraRotation)
-				return;
-
-			mLastCameraPosition = source;
-			mLastCameraRotation = cameraRotation;
-
-			// Calculate vector from camera to "look at point" for the raycast
-			Vector3 lookDirection = cameraRotation.Forward * mGrabRange;
-			Vector3 destination = source + lookDirection;
-			SceneTrace trace = Scene.Trace.Ray(source, destination);
-			trace = trace.WithTag(Tag.Grabbable.ToString());
-
-			SpringGizmo.DrawLine(source, destination, DebugSettings.GrabController_GrabRaycast);
-			SceneTraceResult traceResult = trace.IgnoreStatic().Run();
-
-			// If we hit something, update object references
-			if (traceResult.Hit)
+			if (pGameObject != null)
 			{
-				mGrabObject = traceResult.GameObject;
+				mGrabObject = pGameObject;
 				Assert.NotNull(mGrabObject);
 
 				mGrabRigidBody = mGrabObject.MustGetComponent<Rigidbody>();
@@ -192,9 +181,6 @@ namespace Spring.Components
 				Rotation desiredRotation = cameraRotationDelta.Inverse * mGrabStartObjectRotation;
 				mGrabRigidBody.SmoothRotate(desiredRotation, mResetRotationSpeed, Time.Delta);
 			}
-
-			mLastCameraPosition = source;
-			mLastCameraRotation = cameraRotation;
 		}
 
 		private void RotateGrabbedOject()
@@ -226,21 +212,19 @@ namespace Spring.Components
 			return Sandbox.Input.Pressed(InputDef.resetGrabbedRotation.ToString());
 		}
 
-		private bool CanGrab()
+		private bool IsLookingAtObject()
 		{
 			return mGrabObject != null;
 		}
 
 		private bool StandingOnGrababble()
 		{
-			return CanGrab() && mPlayerController.GroundObject == mGrabObject;	
+			return IsLookingAtObject() && mPlayerController.GroundObject == mGrabObject;	
 		}
 
 		private void Drop()
 		{
 			mGrabRigidBody.AngularDamping = mCachedAngularDamping;
-			mGrabRigidBody = null;
-			mGrabObject = null;
 			mGrabStartObjectRotation = Rotation.Identity;
 			mGrabStartCameraRotation = Rotation.Identity;
 			mCurrentState = State.EmptyHanded;
@@ -249,6 +233,24 @@ namespace Spring.Components
 		Vector3 GetSourcePos()
 		{
 			return mPlayerController.EyePosition;
+		}
+	}
+
+	// Simple class that forwards the interactable events from the grabbed object back to the GrabbableController
+	class Grabbable : Component, IInteractable
+	{
+		// State
+		GrabController mCurrentGrabController;
+
+		void IInteractable.OnLookStart(ref InteractEvent pEvent) 
+		{
+			mCurrentGrabController = pEvent.mIteractor.MustGetComponent<GrabController>();
+			mCurrentGrabController.OnLookStart(pEvent.mIteractee);
+		}
+
+		void IInteractable.OnLookEnd(ref InteractEvent pEvent)
+		{
+			mCurrentGrabController.OnLookEnd();
 		}
 	}
 }
