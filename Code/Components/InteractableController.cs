@@ -94,27 +94,22 @@ namespace Spring.Components
 			SceneTrace trace = Scene.Trace.Ray(source, destination);
 
 			SpringGizmo.DrawLine(source, destination, DebugSettings.InteractableController_GrabRaycast);
-			SceneTraceResult traceResult = trace.IgnoreStatic().Run();
+			IEnumerable<SceneTraceResult> traceResult = trace.IgnoreStatic().RunAll();
 
 			// If we hit something, update object references
-			if (traceResult.Hit)
+			foreach (SceneTraceResult result in traceResult)
 			{
-				mCurrentInteractingObject = traceResult.GameObject;
-				Assert.NotNull(mCurrentInteractingObject);
-				mCurrentInteractables = mCurrentInteractingObject.GetComponents<IInteractable>();
-
-				// If the object isn't an interactible, ignore
-				if (mCurrentInteractables.Count() == 0)
+				IEnumerable<IInteractable> interactibles = result.GameObject.GetComponents<IInteractable>();
+				if (interactibles.Count() > 0)
 				{
-					mCurrentInteractingObject = null;
+					mCurrentInteractingObject = result.GameObject;
+					mCurrentInteractables = interactibles;
+					return;
 				}
+			}	
 
-			}
 			// Otherwise clear the references
-			else
-			{
-				mCurrentInteractingObject = null;
-			}
+			mCurrentInteractingObject = null;
 		}
 
 
