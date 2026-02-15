@@ -67,9 +67,9 @@ namespace Spring.Components
 
 		private void UpdateAnimation()
 		{
-			if (mHinge.Angle.AlmostEqual(mHinge.MaxAngle, 0.5f))
+			if (mHinge.Angle.AlmostEqual(mHinge.MaxAngle, 2.0f))
 				mHinge.TargetAngle = mHinge.MinAngle;
-			else if (mHinge.Angle.AlmostEqual(mHinge.MinAngle, 0.5f))
+			else if (mHinge.Angle.AlmostEqual(mHinge.MinAngle, 2.0f))
 				mHinge.TargetAngle = mHinge.MaxAngle;
 		}
 	}
