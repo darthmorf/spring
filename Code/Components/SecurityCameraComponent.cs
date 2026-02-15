@@ -45,7 +45,9 @@ namespace Spring.Components
 
 			foreach (Decal decal in mDecals)
 			{
-				decal.ColorTexture = mRenderTexture;
+				DecalDefinition def = new DecalDefinition();
+				def.ColorTexture = mRenderTexture;
+				decal.Decals.Add(def);
 			}
 		}
 

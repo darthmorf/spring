@@ -1,27 +1,31 @@
 {
   "RootObject": {
     "__guid": "8158dfe4-e33d-4f7e-a4a9-3d8a248bf449",
-    "__version": 1,
+    "__version": 2,
     "Flags": 0,
-    "Name": "Cube",
+    "Name": "cube_cat",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
-    "NetworkInterpolation": true,
+    "NetworkFlags": 0,
     "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
     "OwnerTransfer": 1,
     "Components": [
       {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "4f26bbba-0589-439b-ae18-68c5c257c81f",
         "__enabled": true,
+        "Flags": 0,
         "BodyGroups": 18446744073709551615,
         "CreateAttachments": false,
+        "LodOverride": null,
         "MaterialGroup": null,
         "MaterialOverride": "materials/kenney-prototype/light-08.vmat",
+        "Materials": null,
         "Model": "models/dev/box.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -42,7 +46,10 @@
         "__type": "Sandbox.BoxCollider",
         "__guid": "81533b75-c0f3-4b36-8657-79fd08e3f2be",
         "__enabled": true,
+        "Flags": 0,
         "Center": "0,0,0",
+        "ColliderFlags": 0,
+        "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
         "OnComponentDestroy": null,
@@ -55,6 +62,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
+        "RollingResistance": null,
         "Scale": "50,50,50",
         "Static": false,
         "Surface": null,
@@ -64,8 +72,13 @@
         "__type": "Sandbox.Rigidbody",
         "__guid": "3e84bbd5-1d00-45d6-aa2c-4b1b2c226e37",
         "__enabled": true,
+        "Flags": 0,
         "AngularDamping": 0,
+        "EnableImpactDamage": true,
+        "EnhancedCcd": false,
         "Gravity": true,
+        "GravityScale": 1,
+        "ImpactDamage": 0,
         "LinearDamping": 0,
         "Locking": {
           "X": false,
@@ -77,6 +90,7 @@
         },
         "MassCenterOverride": "0,0,0",
         "MassOverride": 0,
+        "MinImpactDamageSpeed": 500,
         "MotionEnabled": true,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -92,6 +106,7 @@
         "__type": "Spring.Utils.TagApplier",
         "__guid": "d8360df2-dfa8-4ef9-a47f-49e4719bd6ce",
         "__enabled": true,
+        "Flags": 0,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -106,6 +121,7 @@
         "__type": "Spring.Components.Grabbable",
         "__guid": "f7e8699f-8572-4d77-b523-7beaf2370f9c",
         "__enabled": true,
+        "Flags": 0,
         "mCanBeReset": true,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -118,96 +134,157 @@
     "Children": [
       {
         "__guid": "771cd763-1f66-4089-b434-7d7acad37d00",
-        "__version": 1,
+        "__version": 2,
         "Flags": 0,
         "Name": "Decal",
         "Position": "-25,0,-0.0000002667048",
-        "Rotation": "0.08715574,0,0,0.9961947",
+        "Rotation": "0,0,0,1",
         "Scale": "1,1,1",
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
-        "NetworkInterpolation": true,
+        "NetworkFlags": 0,
         "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
         "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "Sandbox.Decal",
             "__guid": "77499db6-dfeb-4d7e-b15d-16df8d4ada30",
             "__enabled": true,
-            "__version": 1,
+            "Flags": 0,
+            "__version": 3,
             "AttenuationAngle": 1,
-            "ColorTexture": {
-              "$compiler": "texture",
-              "$source": "imagefile",
-              "data": {
-                "FilePath": "textures/misc/madmog.png",
-                "MaxSize": 4096,
-                "ConvertHeightToNormals": false,
-                "NormalScale": 1,
-                "Rotate": 0,
-                "FlipVertical": false,
-                "FlipHorizontal": false,
-                "Padding": {
-                  "Size": "0,0",
-                  "EdgeSize": "0,0"
-                },
-                "Sharpen": 0,
-                "Blur": 0,
-                "Brightness": 1,
-                "Contrast": 1.05,
-                "Saturation": 0.38,
-                "Hue": 0,
-                "Colorize": false,
-                "TargetColor": "0,1,0,1",
-                "CacheToDisk": true
+            "ColorMix": 1,
+            "ColorTint": {
+              "Type": "Constant",
+              "Evaluation": "Life",
+              "GradientA": {
+                "blend": "Linear",
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "1,1,1,1"
+                  }
+                ],
+                "alpha": []
               },
-              "compiled": "textures/generated/imagefile/4523da999bb64105.vtex"
-            },
-            "ColorTint": "255,255,255,255",
-            "NormalTexture": {
-              "$compiler": "texture",
-              "$source": "imagefile",
-              "data": {
-                "FilePath": "textures/misc/madmog.png",
-                "MaxSize": 4096,
-                "ConvertHeightToNormals": true,
-                "NormalScale": 1,
-                "Rotate": 0,
-                "FlipVertical": false,
-                "FlipHorizontal": false,
-                "Padding": {
-                  "Size": "0,0",
-                  "EdgeSize": "0,0"
-                },
-                "Sharpen": 0,
-                "Blur": 0,
-                "Brightness": 1,
-                "Contrast": 1,
-                "Saturation": 1,
-                "Hue": 0,
-                "Colorize": false,
-                "TargetColor": "0,1,0,1",
-                "CacheToDisk": true
+              "GradientB": {
+                "blend": "Linear",
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "1,1,1,1"
+                  }
+                ],
+                "alpha": []
               },
-              "compiled": "textures/generated/imagefile/f8e8cf434e8fd95f.vtex"
+              "ConstantA": "1,1,1,1",
+              "ConstantB": "1,1,1,1"
             },
+            "Decals": [
+              {
+                "$compiler": "embed",
+                "$source": null,
+                "data": {
+                  "ColorTexture": {
+                    "$compiler": "texture",
+                    "$source": "imagefile",
+                    "data": {
+                      "FilePath": "textures/misc/madmog.png",
+                      "MaxSize": 4096,
+                      "ConvertHeightToNormals": false,
+                      "NormalScale": 1,
+                      "Rotate": 0,
+                      "FlipVertical": false,
+                      "FlipHorizontal": false,
+                      "Cropping": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Right": 0,
+                        "Bottom": 0
+                      },
+                      "Padding": {
+                        "Left": 0,
+                        "Top": 0,
+                        "Right": 0,
+                        "Bottom": 0
+                      },
+                      "InvertColor": false,
+                      "Tint": "1,1,1,1",
+                      "Blur": 0,
+                      "Sharpen": 0,
+                      "Brightness": 1,
+                      "Contrast": 1,
+                      "Saturation": 1,
+                      "Hue": 0,
+                      "Colorize": false,
+                      "TargetColor": "1,1,1,1",
+                      "CacheToDisk": true
+                    },
+                    "compiled": null
+                  },
+                  "NormalTexture": null,
+                  "RoughMetalOcclusionTexture": null,
+                  "EmissiveTexture": null,
+                  "EmissionEnergy": 1,
+                  "HeightTexture": null,
+                  "ParallaxStrength": 1,
+                  "Tint": "1,1,1,1",
+                  "ColorMix": 1,
+                  "Width": 16,
+                  "Height": 16,
+                  "FilterMode": "Anisotropic",
+                  "__references": null
+                },
+                "compiled": null
+              }
+            ],
+            "Depth": 8,
+            "LifeTime": 0,
+            "Looped": false,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
             "OnComponentUpdate": null,
-            "RMOTexture": null,
+            "Parallax": 1,
+            "Rotation": {
+              "Type": "Range",
+              "Evaluation": "Seed",
+              "Constants": "0,0,0,0"
+            },
+            "Scale": 1,
             "SequenceId": 0,
             "SheetSequence": false,
-            "Size": "32,32,32",
-            "SortLayer": 0
+            "Size": "2,2",
+            "SortLayer": 0,
+            "Transient": false
           }
         ],
         "Children": []
       }
-    ]
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,

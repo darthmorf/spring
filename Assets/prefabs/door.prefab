@@ -1,23 +1,24 @@
 {
   "RootObject": {
     "__guid": "6e856ea9-6a4d-465d-a4d9-5d434b53d33d",
-    "__version": 1,
+    "__version": 2,
     "Flags": 0,
-    "Name": "Door",
+    "Name": "door",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
     "Tags": "",
     "Enabled": true,
     "NetworkMode": 2,
-    "NetworkInterpolation": true,
+    "NetworkFlags": 0,
     "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
     "OwnerTransfer": 1,
     "Components": [],
     "Children": [
       {
         "__guid": "71b8b803-0cea-46f1-8a31-30592207e158",
-        "__version": 1,
+        "__version": 2,
         "Flags": 0,
         "Name": "Frame A",
         "Position": "5,25,62.5",
@@ -26,18 +27,22 @@
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
-        "NetworkInterpolation": true,
+        "NetworkFlags": 0,
         "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
         "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "Sandbox.ModelRenderer",
             "__guid": "018ab344-7c09-4b88-acc6-37885094eebe",
             "__enabled": true,
+            "Flags": 0,
             "BodyGroups": 18446744073709551615,
             "CreateAttachments": false,
+            "LodOverride": null,
             "MaterialGroup": null,
             "MaterialOverride": "materials/kenney-prototype/dark-01.vmat",
+            "Materials": null,
             "Model": "models/dev/box.vmdl",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -58,7 +63,10 @@
             "__type": "Sandbox.BoxCollider",
             "__guid": "3d90ab98-86d8-4b43-a974-84d85c4485e6",
             "__enabled": true,
+            "Flags": 0,
             "Center": "0,0,0",
+            "ColliderFlags": 0,
+            "Elasticity": null,
             "Friction": null,
             "IsTrigger": false,
             "OnComponentDestroy": null,
@@ -71,6 +79,7 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
+            "RollingResistance": null,
             "Scale": "50,50,50",
             "Static": false,
             "Surface": null,
@@ -81,7 +90,7 @@
       },
       {
         "__guid": "6cf0ed7d-9ce9-4d87-beab-f65b523449a9",
-        "__version": 1,
+        "__version": 2,
         "Flags": 0,
         "Name": "Frame B",
         "Position": "5,-65.46085,62.5",
@@ -90,18 +99,22 @@
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
-        "NetworkInterpolation": true,
+        "NetworkFlags": 0,
         "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
         "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "Sandbox.ModelRenderer",
             "__guid": "4d6610d1-cfb1-43f5-bae1-e3821aaeebb1",
             "__enabled": true,
+            "Flags": 0,
             "BodyGroups": 18446744073709551615,
             "CreateAttachments": false,
+            "LodOverride": null,
             "MaterialGroup": null,
             "MaterialOverride": "materials/kenney-prototype/dark-01.vmat",
+            "Materials": null,
             "Model": "models/dev/box.vmdl",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -122,7 +135,10 @@
             "__type": "Sandbox.BoxCollider",
             "__guid": "07084ced-98a0-4f95-a5d8-16756602f848",
             "__enabled": true,
+            "Flags": 0,
             "Center": "0,0,0",
+            "ColliderFlags": 0,
+            "Elasticity": null,
             "Friction": null,
             "IsTrigger": false,
             "OnComponentDestroy": null,
@@ -135,6 +151,7 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
+            "RollingResistance": null,
             "Scale": "50,50,50",
             "Static": false,
             "Surface": null,
@@ -144,84 +161,146 @@
         "Children": [
           {
             "__guid": "64cebc32-e390-42c4-b26b-20cb124f3717",
-            "__version": 1,
+            "__version": 2,
             "Flags": 0,
             "Name": "Description",
-            "Position": "0,11.58762,1.710971",
+            "Position": "18.30934,11.58762,3.216623",
             "Rotation": "0,0,1,-0.00000004371139",
             "Scale": "2.5,1.4,0.336",
             "Tags": "",
             "Enabled": true,
             "NetworkMode": 2,
-            "NetworkInterpolation": true,
+            "NetworkFlags": 0,
             "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
             "OwnerTransfer": 1,
             "Components": [
               {
                 "__type": "Sandbox.Decal",
                 "__guid": "db42ece8-69b3-4fc5-a42e-8bfd0920d2e9",
                 "__enabled": true,
-                "__version": 1,
+                "Flags": 0,
+                "__version": 3,
                 "AttenuationAngle": 1,
-                "ColorTexture": {
-                  "$compiler": "texture",
-                  "$source": "text",
-                  "data": {
-                    "Size": "1280,720",
-                    "Margin": {
-                      "Size": "0,0",
-                      "EdgeSize": "0,0"
-                    },
-                    "TextFlags": "Left, CenterHorizontally, CenterVertically, DontClip",
-                    "TextScope": {
-                      "Text": "Sticky:\t\t\t false\nMonodirectional: false\nInteractable:\t true",
-                      "TextColor": "1,1,1,1",
-                      "FontName": "Roboto Mono",
-                      "FontSize": 45,
-                      "FontWeight": 600,
-                      "FontItalic": false,
-                      "LineHeight": 1,
-                      "LetterSpacing": 0,
-                      "WordSpacing": 0,
-                      "Outline": {
-                        "Enabled": false,
-                        "Size": 4,
-                        "Color": "0,0,1,1"
-                      },
-                      "Shadow": {
-                        "Enabled": false,
-                        "Size": 8,
-                        "Color": "0,0,0,1",
-                        "Offset": "4,4"
-                      },
-                      "OutlineUnder": {
-                        "Enabled": false,
-                        "Size": 4,
-                        "Color": "0,1,0,1"
-                      },
-                      "ShadowUnder": {
-                        "Enabled": false,
-                        "Size": 4,
-                        "Color": "0,0,0,1",
-                        "Offset": "4,4"
+                "ColorMix": 1,
+                "ColorTint": {
+                  "Type": "Constant",
+                  "Evaluation": "Life",
+                  "GradientA": {
+                    "blend": "Linear",
+                    "color": [
+                      {
+                        "t": 0.5,
+                        "c": "1,1,1,1"
                       }
-                    }
+                    ],
+                    "alpha": []
                   },
-                  "compiled": "textures/generated/text/42b5dda97c2786d6.vtex"
+                  "GradientB": {
+                    "blend": "Linear",
+                    "color": [
+                      {
+                        "t": 0.5,
+                        "c": "1,1,1,1"
+                      }
+                    ],
+                    "alpha": []
+                  },
+                  "ConstantA": "1,1,1,1",
+                  "ConstantB": "1,1,1,1"
                 },
-                "ColorTint": "255,255,255,255",
-                "NormalTexture": null,
+                "Decals": [
+                  {
+                    "$compiler": "embed",
+                    "$source": null,
+                    "data": {
+                      "ColorTexture": {
+                        "$compiler": "texture",
+                        "$source": "text",
+                        "data": {
+                          "Size": "1024,512",
+                          "Margin": {
+                            "Left": 0,
+                            "Top": 0,
+                            "Right": 0,
+                            "Bottom": 0
+                          },
+                          "TextFlags": "CenterVertically, DontClip",
+                          "TextScope": {
+                            "Text": "Sticky:false\nMonodirectional: false\nInteractable: true",
+                            "TextColor": "1,1,1,1",
+                            "FontName": "Roboto",
+                            "FontSize": 107.74418,
+                            "FontWeight": 400,
+                            "FontItalic": false,
+                            "LineHeight": 1,
+                            "LetterSpacing": 0,
+                            "WordSpacing": 0,
+                            "FilterMode": "Bilinear",
+                            "FontSmooth": "Auto",
+                            "Outline": {
+                              "Enabled": false,
+                              "Size": 4,
+                              "Color": "0,0,1,1"
+                            },
+                            "Shadow": {
+                              "Enabled": false,
+                              "Size": 4,
+                              "Color": "0,0,0,1",
+                              "Offset": "4,4"
+                            },
+                            "OutlineUnder": {
+                              "Enabled": false,
+                              "Size": 4,
+                              "Color": "0,1,0,1"
+                            },
+                            "ShadowUnder": {
+                              "Enabled": false,
+                              "Size": 4,
+                              "Color": "0,0,0,1",
+                              "Offset": "4,4"
+                            }
+                          }
+                        },
+                        "compiled": null
+                      },
+                      "NormalTexture": null,
+                      "RoughMetalOcclusionTexture": null,
+                      "EmissiveTexture": null,
+                      "EmissionEnergy": 1,
+                      "HeightTexture": null,
+                      "ParallaxStrength": 1,
+                      "Tint": "1,1,1,1",
+                      "ColorMix": 1,
+                      "Width": 16,
+                      "Height": 16,
+                      "FilterMode": "Anisotropic",
+                      "__references": null
+                    },
+                    "compiled": null
+                  }
+                ],
+                "Depth": 8,
+                "LifeTime": 0,
+                "Looped": false,
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
                 "OnComponentEnabled": null,
                 "OnComponentFixedUpdate": null,
                 "OnComponentStart": null,
                 "OnComponentUpdate": null,
-                "RMOTexture": null,
+                "Parallax": 1,
+                "Rotation": {
+                  "Type": "Range",
+                  "Evaluation": "Seed",
+                  "Constants": "0,0,0,0"
+                },
+                "Scale": 1,
                 "SequenceId": 0,
                 "SheetSequence": false,
-                "Size": "400,32,32",
-                "SortLayer": 1
+                "Size": "1,1",
+                "SortLayer": 1,
+                "Transient": false
               }
             ],
             "Children": []
@@ -230,7 +309,7 @@
       },
       {
         "__guid": "ac28941a-0a8b-4e17-a325-792120e79da4",
-        "__version": 1,
+        "__version": 2,
         "Flags": 0,
         "Name": "Door",
         "Position": "5,-20.1,65",
@@ -239,18 +318,22 @@
         "Tags": "",
         "Enabled": true,
         "NetworkMode": 2,
-        "NetworkInterpolation": true,
+        "NetworkFlags": 0,
         "NetworkOrphaned": 0,
+        "NetworkTransmit": true,
         "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "Sandbox.ModelRenderer",
             "__guid": "64ecea10-01bf-4fa1-b9ed-bceab0750fff",
             "__enabled": true,
+            "Flags": 0,
             "BodyGroups": 18446744073709551615,
             "CreateAttachments": false,
+            "LodOverride": null,
             "MaterialGroup": null,
             "MaterialOverride": "materials/kenney-prototype/blue-02.vmat",
+            "Materials": null,
             "Model": "models/dev/box.vmdl",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -271,7 +354,10 @@
             "__type": "Sandbox.BoxCollider",
             "__guid": "3b7ab0a8-2612-43ae-bc58-0c90bdc7249f",
             "__enabled": true,
+            "Flags": 0,
             "Center": "0,0,0",
+            "ColliderFlags": 0,
+            "Elasticity": null,
             "Friction": null,
             "IsTrigger": false,
             "OnComponentDestroy": null,
@@ -284,6 +370,7 @@
             "OnObjectTriggerExit": null,
             "OnTriggerEnter": null,
             "OnTriggerExit": null,
+            "RollingResistance": null,
             "Scale": "50,50,50",
             "Static": false,
             "Surface": null,
@@ -293,8 +380,13 @@
             "__type": "Sandbox.Rigidbody",
             "__guid": "f45e7a8f-f830-47a8-9561-7c4c1150cb58",
             "__enabled": true,
+            "Flags": 0,
             "AngularDamping": 0,
+            "EnableImpactDamage": true,
+            "EnhancedCcd": false,
             "Gravity": true,
+            "GravityScale": 1,
+            "ImpactDamage": 0,
             "LinearDamping": 0,
             "Locking": {
               "X": false,
@@ -306,6 +398,7 @@
             },
             "MassCenterOverride": "0,25,0",
             "MassOverride": 0,
+            "MinImpactDamageSpeed": 500,
             "MotionEnabled": true,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -321,6 +414,7 @@
             "__type": "Spring.Utils.TagApplier",
             "__guid": "1106543e-a87b-4f8f-b84b-ef5d44eb61a3",
             "__enabled": true,
+            "Flags": 0,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
             "OnComponentEnabled": null,
@@ -335,6 +429,7 @@
             "__type": "Spring.Components.Door",
             "__guid": "87a4aaa4-dfb5-4bba-8248-fa749d698beb",
             "__enabled": true,
+            "Flags": 0,
             "mClosedAngle": 0,
             "mClosedThresholdAngle": 2,
             "mCurrentState": "Closed",
@@ -355,6 +450,7 @@
             "__type": "Spring.Components.Grabbable",
             "__guid": "4916fa07-b434-4914-a15c-8d0f3bbf8a9d",
             "__enabled": true,
+            "Flags": 0,
             "mCanBeReset": false,
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -367,7 +463,7 @@
         "Children": [
           {
             "__guid": "43eae848-314d-433f-b8b4-60a166344f08",
-            "__version": 1,
+            "__version": 2,
             "Flags": 0,
             "Name": "Hinge",
             "Position": "0,25,-0.0000003563792",
@@ -376,15 +472,18 @@
             "Tags": "",
             "Enabled": true,
             "NetworkMode": 2,
-            "NetworkInterpolation": true,
+            "NetworkFlags": 0,
             "NetworkOrphaned": 0,
+            "NetworkTransmit": true,
             "OwnerTransfer": 1,
             "Components": [
               {
                 "__type": "Sandbox.HingeJoint",
                 "__guid": "63c6a286-fc71-4299-a439-9e5068cb2d50",
                 "__enabled": true,
+                "Flags": 0,
                 "__version": 1,
+                "AnchorBody": null,
                 "Attachment": "LocalFrames",
                 "Body": {
                   "_type": "gameobject",
@@ -426,7 +525,26 @@
           }
         ]
       }
-    ]
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,
